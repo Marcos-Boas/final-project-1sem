@@ -12,7 +12,7 @@ Repositório criado com o intuito de me forncer um backup caso necessário do me
 
 <br>
 
-<img src="site/base-palheta.png" height="400rem">
+<img src="https://bookmarkos.s3.amazonaws.com/uploads/palette_pic/image/2674/large_photo-1589260605620-f4fbe78d1eaa.jpeg" height="400rem">
 
 <br>
 
