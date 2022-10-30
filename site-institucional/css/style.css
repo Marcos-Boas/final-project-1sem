@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', Arial, 'Times New Roman';
+}
+
+body {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+    /* list-style-image: url(''); */
+}
+
+
+/* MENU LATERAL */
+.menuLateral {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 20vw;
+    background-color: #554e9a;
+    color: #fefefe;
+    position: fixed;
+    
+}
+
+.menuLateral .img{
+    margin-top: 10%;
+    width: 100%;
+    height: 12vh;
+    background-image: url('../imgs/logoProjeto.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.apresentacaoCliente{
+    margin-top: 5%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.listaMenuLateral {
+    margin: 15% 0 0 10%;
+}
+
+.listaMenuLateral li{
+    margin-bottom: 8%;   
+    transition: 0.2s;
+}
+
+.listaMenuLateral li:hover{
+    cursor: pointer;
+    transform: scale(1);
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.listaMenuLateral li:after{
+    content: " <";
+    visibility: hidden;
+}
+
+.listaMenuLateral li:hover:after{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.rodape{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    width: 100%;
+    height: 15vh;
+    margin-top: 23%;
+}
+
+
+.instagram, .facebook, .twitter{
+    background-size: cover;
+    width: 22%;
+    height: 60%;
+    background-position: center;
+}
+
+
+.instagram, .facebook, .twitter:hover{
+    cursor: pointer;
+}
+
+
+.instagram{
+    background-image: url('../imgs/instagram.png');
+}
+
+.facebook{
+    background-image: url('../imgs/facebook.png');
+}
+
+.twitter{
+    background-image: url('../imgs/twitter.png');
+}
+
+.copyright{
+    text-align: center;
+}
+/* FINAL - MENU LATERAL */
