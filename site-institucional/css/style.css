@@ -26,13 +26,9 @@ ul {
     
 }
 
-.menuLateral .img{
-    margin-top: 10%;
+.menuLateral img{
+    margin-top: 5%;
     width: 100%;
-    height: 12vh;
-    background-image: url('../imgs/logoProjeto.png');
-    background-size: cover;
-    background-position: center;
 }
 
 .apresentacaoCliente{
@@ -47,14 +43,14 @@ ul {
 
 .listaMenuLateral li{
     margin-bottom: 8%;   
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 .listaMenuLateral li:hover{
     cursor: pointer;
     transform: scale(1);
     font-weight: bold;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 .listaMenuLateral li:after{
@@ -77,32 +73,81 @@ ul {
 }
 
 
-.instagram, .facebook, .twitter{
-    background-size: cover;
+.rodape img{
     width: 22%;
-    height: 60%;
-    background-position: center;
 }
 
 
-.instagram, .facebook, .twitter:hover{
+.rodape img:hover{
     cursor: pointer;
-}
-
-
-.instagram{
-    background-image: url('../imgs/instagram.png');
-}
-
-.facebook{
-    background-image: url('../imgs/facebook.png');
-}
-
-.twitter{
-    background-image: url('../imgs/twitter.png');
 }
 
 .copyright{
     text-align: center;
 }
 /* FINAL - MENU LATERAL */
+
+
+/* CORPO */
+/* CARD */
+
+.primeiraCor{
+    background-color: #b8baea;
+}
+
+.segundaCor{
+    background-color: #f2f6fa;
+}
+
+
+.corpo{
+    width: 80vw;
+    margin-left: 20vw;
+}
+
+.card{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+/* CARD 1 - PQ SKINS? */
+
+.imagemCard1{
+    background-image: url('../imgs/skinsLol.jpg');
+    background-size: cover;
+    background-position: center;
+    /* filter:brightness(0.4); */
+    
+}
+
+.opaca{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.842);
+    backdrop-filter: blur(5px); */
+}
+
+.tituloCard{
+    margin-top: 8%;
+    margin-bottom: 2%;
+    color:#fefefe;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    /* margin-left: 10%; */
+}
+
+.textoCard{
+    color:#fefefe;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: justify;
+    margin: 0 5%
+}
+
+/* FIM - CARD 1 - PQ SKINS? */
