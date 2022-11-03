@@ -6,6 +6,10 @@
     scrollbar-color: #554e9a #9d9fe9; 
 }
 
+*::-webkit-scrollbar{
+    scrollbar-width:thin;  
+    scrollbar-color: #554e9a #9d9fe9; 
+}
 html{
     scroll-behavior: smooth;
 }
@@ -76,7 +80,6 @@ ul {
 
 
 .rodape{
-    margin-top: 30%;
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -92,7 +95,7 @@ ul {
 }
 
 .copyright{
-    margin-top: 5%;
+    margin-top: 1%;
     text-align: center;
 }
 /* FINAL - MENU LATERAL */
