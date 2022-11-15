@@ -6,49 +6,80 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AquaTech | Cadastro</title>
+    <title>MS | Cadastro</title>
 
 
     <script src="./js/funcoes.js"></script>
 
 
     <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link rel="shortcut icon" href="assets/imgs/logoPagina.png" type="image/x-icon">
 </head>
 
 <body>
 
-    <!--header inicio-->
-    <div class="header">
-        <div class="container">
-            <h1 class="titulo">AquaTech</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="./index.html">
-                        Inicial
-                    </a>
-                </li>
-                <li>
-                    <a href="./simulador.html">Simulador</a>
-                </li>
-                <li>|</li>
-                <li>
-                    <a href="./login.html">Login</a>
-                </li>
-                <li class="agora">
-                    <a href="./cadastro.html">Cadastro</a>
-                </li>
-            </ul>
-        </div>
+    <div class="capa">
+        <div class="opacaLogin"></div>
+        <div class="circuloRoxo"></div>
+        <img src="assets/imgs/riven.png" alt="" class="kogMaw">
     </div>
-    <!--header fim-->
+
+    <div class="menu">
 
 
-    <div class="banner ">
+        <img src="assets/imgs/setaEsquerda.png" alt="" class="logo">
+
+        <div class="apresentacaoMenu">
+            <div class="recepcao">
+                <h1>Seja bem-vindo!</h1>
+                <h3>Por favor, insira suas informações</h3>
+            </div>
+
+            <label for="in_nomeCompleto">Nome completo</label> <br>
+            <input type="text" id="in_nomeCompleto" placeholder="ex: Jose Alves dos Santos"><br>
+
+            <label for="in_dataNasc">Data de nascimento</label> <br>
+            <input type="date" id="in_dataNasc"><br>
+
+            <label for="in_dataNasc">Número para contato</label> <br>
+            <input type="number" id="in_numContato" placeholder="xx xxxxx xxxx"><br>
+            
+            <label for="in_email">Email</label> <br>
+            <input type="text" id="in_email" placeholder="email@email.com"><br>
+
+            <label for="in_email">Senha</label> <br>
+            <input type="text" id="in_senha" placeholder="••••••••••"><br>
+
+            <label for="in_senha">Confirmar senha</label> <br>
+            <input type="text" id="in_senhaConfirmada" placeholder="••••••••••">
+
+
+            <div class="subCampos">
+                <div class="campoCheck">
+                    <input type="checkbox" class="inputCheck">
+                    Aceitar todos os termos
+                </div>
+                <!-- <span class="esqueceuSenha">Esqueceu a senha</span> -->
+            </div>
+
+            <button onclick="cadastrar()">Cadastrar</button>
+        </div>
+
+        <span>Já possui uma conta? <a href="login.html">Entre</a></span>
+
+        <span class="copyright">&copy; Marcos Henrique - SPTech / ADS</span>
+
+    </div>
+
+
+
+    <!-- <div class="banner ">
         <div class="alerta_erro">
             <div class="card_erro" id="cardErro">
                 <span id="mensagem_erro"></span>
@@ -57,14 +88,14 @@
         <div class="container tamanho-conteudo">
             <div class="card medio">
                 <h2>Bem-vindo!</h2>
-                <div class="formulario">
+                <div class="formulario"> -->
 
                     <!--
                          Para inserir mais um campo, copie uma das inputs abaixo.
                          Assim que inserir vá para o script abaixo.
                      -->
 
-                    <span class="tipo_campo">Nome:</span>
+                    <!-- <span class="tipo_campo">Nome:</span>
                     <input id="nome_input" type="text" placeholder="Seu nome">
 
                     <span class="tipo_campo">E-mail:</span>
@@ -88,20 +119,7 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por um aluno &hearts; SPTech &copy; 2022
-                <br>
-                <span class="version">
-                    v1.0.0
-                </span>
-            </h4>
-        </div>
-    </div>
-    <!--footer fim-->
+    </div> -->
 
 
 </body>
@@ -110,25 +128,23 @@
 
 <script>
     function cadastrar() {
-        aguardar();
+        // aguardar();
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
-        var nomeVar = nome_input.value;
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
-        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var nomeVar = in_nomeCompleto.value;
+        var emailVar = in_email.value;
+        var senhaVar = in_senha.value;
+        var dataVar = in_dataNasc.value;
+        var confirmacaoSenhaVar = in_senhaConfirmada.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || dataVar == "" || confirmacaoSenhaVar == "") {
+            alert('Preencha todas as informações!');
 
             finalizarAguardar();
             return false;
         }
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
+     
 
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
@@ -141,16 +157,17 @@
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
                 emailServer: emailVar,
-                senhaServer: senhaVar
+                senhaServer: senhaVar,
+                dataServer: dataVar
             })
         }).then(function (resposta) {
 
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                cardErro.style.display = "block";
+                // cardErro.style.display = "block";
 
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
 
                 setTimeout(() => {
                     window.location = "login.html";
@@ -169,8 +186,6 @@
         return false;
     }
 
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
+
 
 </script>

@@ -6,12 +6,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/funcoes.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="shortcut icon" href="imgs/logoPagina.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/imgs/logoPagina.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <title>MS | Home</title>
 </head>
@@ -21,10 +22,10 @@
     <!-- COMEÇO MENU LATERAL -->
     <div class="menuLateral">
 
-        <img src="imgs/logoProjeto.png" alt="Logo Markléber Skins" />
+        <img src="assets/imgs/logoProjeto.png" alt="Logo Markléber Skins" />
 
 
-        <span class="apresentacaoCliente">Olá ?????, Bem vindo!</span>
+        <span class="apresentacaoCliente">Olá <span id="b_usuario">visitante</span>, Bem vindo!</span>
 
         <ul class="listaMenuLateral">
             <li>| Home</li>
@@ -41,9 +42,9 @@
 
         
             <div class="rodape">
-                <img src="imgs/facebook.png" alt="Logo do facebook" />
-                <img src="imgs/instagram.png" alt="Logo do instagram" />
-                <img src="imgs/twitter.png" alt="Logo do twitter" />
+                <img src="assets/imgs/facebook.png" alt="Logo do facebook" />
+                <img src="assets/imgs/instagram.png" alt="Logo do instagram" />
+                <img src="assets/imgs/twitter.png" alt="Logo do twitter" />
             </div>
             <span class="copyright">&copy; Marcos Henrique - SPTech / ADS</span>
         
@@ -82,3 +83,14 @@
 </body>
 
 </html>
+
+
+<script>
+    console.log(sessionStorage.NOME_USUARIO)
+    console.log('Sessions storage:' + JSON.stringify(sessionStorage))
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO == undefined ? 'Marquinhos' : sessionStorage.NOME_USUARIO;
+    // validarSessao();
+
+        
+
+</script>

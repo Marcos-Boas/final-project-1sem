@@ -2,6 +2,7 @@ create database markleberSkins;
 
 use markleberSkins;
 
+
 create table usuario(
 	idUsuario int primary key auto_increment,
     nomeUsuario varchar(45),
