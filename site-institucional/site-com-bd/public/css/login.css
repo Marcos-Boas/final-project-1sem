@@ -1,0 +1,168 @@
+/* ESTILIZAÇÕES GERAIS */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', Arial, 'Times New Roman';
+    scrollbar-width:thin;  
+    scrollbar-color: #554e9a #9d9fe9; 
+}
+
+
+body{
+    display: flex;
+}
+
+/* FINALIZAÇÃO DAS ESTILIZAÇÕES GERAIS */
+
+
+
+/* ESTILIZAÇÃO DO MENU */
+.menu{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.logo{
+    position: absolute;
+    height: 6%;
+    top:2%;
+    left:1%;
+    
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+
+
+.apresentacaoMenu{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.recepcao{
+    margin-bottom: 10%;
+}
+
+
+h1{
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+h3{
+    font-weight: 400;
+}
+
+label{
+    margin-bottom: 1.5%;
+}
+
+.apresentacaoMenu input{
+    width: 94%;
+    border:1px solid rgb(78, 78, 78);
+    border-radius: 5px;
+    margin-bottom: 3%;
+    height: 10%;
+    padding: 3%;
+}
+
+
+.subCampos{
+    /* margin-top: %; */
+    margin-bottom: 3%;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.campoCheck{
+    display: flex;
+    justify-content: flex-start;
+    white-space:nowrap;
+    width: 35%;
+}
+
+.inputCheck{
+    height: 50%;
+    width: 50%;
+}
+
+.esqueceuSenha{
+    color:#554e9a;
+    font-weight: 500;
+}
+
+.esqueceuSenha:hover{
+    color:#493eb3;
+    cursor: pointer;
+}
+
+
+button{
+    color: #fff;
+    background-color: #554e9a;
+    border-radius: 5px;
+    border:1px solid #554e9a;
+    height: 60%;
+    transition: 0.4s;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #493eb3;
+    transition: 0.4s;
+}
+
+span{
+    margin-top: 3%;
+}
+
+
+span a{
+    text-decoration: none;
+    color:#554e9a;
+}
+.copyright{
+    color:rgba(0, 0, 0, 0.473);
+    position: absolute;
+    bottom:1%;
+    left:1%;
+}
+
+/* FINAL ESTILIZAÇÃO DO MENU */
+
+
+.capa{
+    width: 50%;
+    height: 100vh;
+    background-color: #f2f6fa;
+}
+
+
+.circuloRoxo{
+    height: 100%;
+    width: 100%;
+    background-image: url('../imgs/circuloRoxo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.opacaLogin{
+    position: fixed;
+    margin-top: 24%;
+    width: 100vw;
+    height: 50vh;
+    background-color: #f2f6fa18;
+    backdrop-filter : blur(20px);
+}
+
