@@ -1,35 +1,11 @@
 # PI-ProjetoIndividual-1Semestre
-Repositório criado com o intuito de forncer um backup -caso necessário- do meu projeto individual da 3° Sprint no curso de análise e desenvolvimento de sistemas.
-
-<hr />
-
-<h2> Tecnologias usadas</h2>
-
-
-
-
-<h2> Palheta de cores escolhida</h2>
-
-- #f2f6fa 
-- #554e9a 
-- #fefefe 
-- #b8baea
-- #f8fafd 
+<i>Repositório criado com o intuito de forncer um backup - caso necessário - do meu projeto individual da 3° Sprint no curso de análise e desenvolvimento de sistemas.</i>
 
 <br>
 
-<img src="https://bookmarkos.s3.amazonaws.com/uploads/palette_pic/image/2676/large_photo-1589219123229-03469f0bc3ea.jpeg" height="400rem">
+<hr /> <br>
 
-<br>
-
-Site usado para a escolha da palheta:
-<i>https://colorpalettes.earth</i>
-
-<hr />
-
-
-<h1>Tema: Contextualização de skins</h1>
-
+<h1>Tema: Contextualização das skins de jogos eletrônicos</h1>
 
 <h3>Com um tema de meu gosto pessoal, desenvolvi esse projeto com o intuito de abordar todo o conteúdo aprendido durante o primeiro semestre: tecnologias, conceitos, boas práticas e etc.</h3>
 
@@ -45,7 +21,44 @@ Site usado para a escolha da palheta:
 
 <img src="https://lh3.googleusercontent.com/3XMr1yD5ixvzcSczYvJ3M5kc0B2v9Z5Yh3ojTTEUeEmZRV5K3ui1wgs1xA5ZBha2JjxZ0L-mOSjlnCNnsSxFTN9CyYPXog54-q9AB5oHEbwxW_BziJLlZxlW5e-r89ry8T8wBwzRSCde-s8uy7ERhuzCu0oYKB0-DSC4fjVgCmjIX_pUYUkESwB57yffYkpj3BWr2FQ2fl2tS9Z7iu6zpGykuvWDc2_gYDVvTi8RD_GKnJPCWzBz6uslW3cA9TG0fx4ZdJ2yxMELFOqXm3ZXKVgDyHDZlf0kAFQAmOKG_5sDc1UScs1B0L11v50XriZB9Z2pIUjyUgAsnHj3oGpPwx_Ok1R_lt7eHQ6GAuwouozqPNZZxcRFUdM6TU5ofZjTDa4KPhjrEhmNNeVN9h-SANxUB7ghOq5c2M_vxeYMwPT5JJswfoCcwY0ZY47U2OPpGHYhIrs8_5lukR1fggR9RVM3Q0cuHxVwd3LZ3qhJNfRfv-Qy8hZJnr7W5wiE4e-H_ltuwFsYDvNGWc4Hr3PJUbMNUB7TxSNdYgFj8onBTnZHDBgQajnu-A3gcUVFO73OG14_m9BqJ_nbEWgG-94t0i0hRqEnzMccJ3nIvqcRaml0zTjQhD-BGUEkZeqj7DHlJ3QjPIN9JSAZQyFC0gHUaR4d_oYvAtnYzo2JmeZ_wE4hZqG7uozguffe1dTITLGZbClsneZ7Y3c_Q-xnA9LBG_Qv3ftsu4QwxACsLQ6NJMKc2Nrpd0MxgxhNygpTx6O3WBsUMwKxdJ3ZnMyDFeETmA7xjSqE1lyZjMB99OSxUDT8DOdOiXqnxkZKipts3KsHB6iwWpAqEf4W2eAomeWTTStmOghT_Ns0ReD2VZNS76iG4B-c4f8uKUEe9dNQgndyWVTWyZWW3BXWJ3SFYbRM9XOT0bQomauG9xGYvntODOVKcUZz_0EVvxfiCpi9hpD_FDXaiBSVkWwg7EZnjEwrzSB2mT-ywU_7qB-9DGup8El1GjCS9c2-GVwPIw=w1280-h620-no?authuser=0">
 
-
+<br>
+<hr />
 <br><br>
+
+
+<h2> Tecnologias usadas:</h2>
+
+<br>
+
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+<img src="	https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white">
+<img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white">
+
+<br>
+<hr />
+<br><br>
+
+
+<h2>Palheta de cores escolhida:</h2> <br>
+
+- #f2f6fa 
+- #554e9a 
+- #fefefe 
+- #b8baea
+- #f8fafd 
+
+<br>
+
+<img src="https://bookmarkos.s3.amazonaws.com/uploads/palette_pic/image/2676/large_photo-1589219123229-03469f0bc3ea.jpeg" height="400rem" style="transform: rotate(270deg); display: block; margin-left: 10%; height:60vh">
+
+<br>
+
+Site usado para a escolha da palheta:
+<i>https://colorpalettes.earth</i>
+
+<hr />
+
 
 <i>Em andamento... Novidades em breve</i>
