@@ -22,10 +22,13 @@ body{
     align-items: center;
     justify-content: center;
     width: 50%;
+    height: 100%;
+    
+    margin-left: 50%;
 }
 
 .logo{
-    position: absolute;
+    position: fixed;
     height: 6%;
     top:2%;
     left:1%;
@@ -43,6 +46,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    height: 100%;
 }
 
 .recepcao{
@@ -53,6 +57,8 @@ body{
 h1{
     font-size: 3rem;
     font-weight: 400;
+    white-space: nowrap;
+    margin-top: 5%;
 }
 
 h3{
@@ -127,7 +133,7 @@ button{
     background-color: #554e9a;
     border-radius: 5px;
     border:1px solid #554e9a;
-    height: 40%;
+    height: 7vh;
     transition: 0.4s;
 }
 
@@ -145,10 +151,15 @@ span{
 span a{
     text-decoration: none;
     color:#554e9a;
+    
+}
+
+.spanLink{
+    margin-bottom: 5%;
 }
 .copyright{
     color:rgba(0, 0, 0, 0.473);
-    position: absolute;
+    position: fixed;
     bottom:1%;
     left:1%;
 }
@@ -159,13 +170,14 @@ span a{
 /* ESTILIZAÇÃO DA CAPA */
 
 .capa{
+    position: fixed;
     width: 50%;
     height: 100vh;
     background-color: #f2f6fa;
 }
 
 .opacaLogin{
-    position: fixed;
+    position: absolute;
     margin-top: 0%;
     width: 50vw;
     height: 50vh;
@@ -182,10 +194,10 @@ span a{
 }
 
 .kogMaw{
-    position: absolute;
+    position: fixed;
     right: 0%;
     bottom: 0%;
-    width: 5%;
+    width: 3%;
 }
 
 /* FINZALIZAÇÃO ESTILIZAÇÃO DA CAPA */

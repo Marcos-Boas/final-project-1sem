@@ -52,21 +52,22 @@ body{
 h1{
     font-size: 3rem;
     font-weight: 400;
+    white-space: nowrap;
 }
 
 h3{
     font-weight: 400;
 }
 
-label{
-    margin-bottom: 1.5%;
-}
+/* label{
+    margin-bottom: 1%;
+} */
 
 .apresentacaoMenu input{
     width: 94%;
     border:1px solid rgb(78, 78, 78);
     border-radius: 5px;
-    margin-bottom: 3%;
+    /* margin-bottom: 3%; */
     height: 10%;
     padding: 3%;
 }
@@ -88,10 +89,10 @@ label{
 
 
 .subCampos{
-    /* margin-top: %; */
+    margin-top: 3%;
     margin-bottom: 3%;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     width: 100%;
     justify-content: space-between;
 }
@@ -101,12 +102,10 @@ label{
     display: flex;
     justify-content: flex-start;
     white-space:nowrap;
-    width: 35%;
 }
 
 .inputCheck{
-    height: 50%;
-    width: 50%;
+    margin-right: 2%;
 }
 
 .esqueceuSenha{
@@ -125,7 +124,7 @@ button{
     background-color: #554e9a;
     border-radius: 5px;
     border:1px solid #554e9a;
-    height: 100%;
+    height: 10vh;
     transition: 0.4s;
 }
 
@@ -164,8 +163,9 @@ span a{
 
 .opacaLogin{
     position: fixed;
-    margin-top: 24%;
-    width: 100vw;
+    bottom:0;
+    right: 0;
+    width: 50vw;
     height: 50vh;
     background-color: #f2f6fa18;
     backdrop-filter : blur(20px);

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    
+
 <head>
     <script src="./js/funcoes.js"></script>
     <meta charset="UTF-8">
@@ -28,26 +28,24 @@
         <span class="apresentacaoCliente">Olá <span id="b_usuario">visitante</span>, Bem vindo!</span>
 
         <ul class="listaMenuLateral">
-            <li>| Home</li>
-            <li>| </li>
-            <li>| </li>
-            <li>| Basket</li>
-            <li>| Orders</li>
-            <li>| My cards</li>
-            <li>| Sponsoring</li>
-            <li>| Login</li>
-            <li>| Cadastro</li>
+            <li><a href="#ultimaDiv">| Home</a></li>
+            <li><a href="#ultimaDiv">| Definição</a></li>
+            <li><a href="#ultimaDiv">| Exemplos</a></li>
+            <li><a href="#ultimaDiv">| Dados Monetários</a></li>
+            <li><a href="#ultimaDiv">| Escolha a sua</a></li>
+            <li><a href="#ultimaDiv">| Contato</a></li>
+            <li><a href="login.html">| Entrar</a></li>
+            <li><a href="cadastro.html">| Cadastro</a></li>
+            <li><a href="#ultimaDiv">| Sair</a></li>
         </ul>
 
+        <div class="rodape">
+            <img src="assets/imgs/facebook.png" alt="Logo do facebook" />
+            <img src="assets/imgs/instagram.png" alt="Logo do instagram" />
+            <img src="assets/imgs/twitter.png" alt="Logo do twitter" />
+        </div>
+        <span class="copyright">&copy; Marcos Henrique - SPTech / ADS</span>
 
-        
-            <div class="rodape">
-                <img src="assets/imgs/facebook.png" alt="Logo do facebook" />
-                <img src="assets/imgs/instagram.png" alt="Logo do instagram" />
-                <img src="assets/imgs/twitter.png" alt="Logo do twitter" />
-            </div>
-            <span class="copyright">&copy; Marcos Henrique - SPTech / ADS</span>
-        
     </div>
 
     <!-- FINAL MENU LATERAL -->
@@ -65,12 +63,12 @@
                     Iremos falar mais sobre isso logo abaixo! <img src="" alt="">
                 </div>
                 <!-- <img src="imgs/imagem3.png" alt="" width="40%"> -->
-                
+
             </div>
 
         </div>
         <div class="card segundaCor">
-            
+
         </div>
         <div class="card">
 
@@ -88,9 +86,9 @@
 <script>
     console.log(sessionStorage.NOME_USUARIO)
     console.log('Sessions storage:' + JSON.stringify(sessionStorage))
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO == undefined ? 'Marquinhos' : sessionStorage.NOME_USUARIO;
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO == undefined ? 'Marcos' : sessionStorage.NOME_USUARIO;
     // validarSessao();
 
-        
+
 
 </script>
