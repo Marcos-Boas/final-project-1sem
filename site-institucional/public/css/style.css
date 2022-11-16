@@ -84,7 +84,6 @@ a{
 }
 
 
-
 .rodape{
     display: flex;
     justify-content: space-around;
@@ -101,7 +100,7 @@ a{
 }
 
 .copyright{
-    margin-top: 1%;
+    margin-top: 3%;
     text-align: center;
 }
 /* FINAL - MENU LATERAL */

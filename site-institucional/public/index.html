@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../js/funcoes.js"></script>
+    <script src="./js/funcoes.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,7 +17,7 @@
     <title>MS | Home</title>
 </head>
 
-<body>
+<body onload="validarSessao()">
 
     <!-- COMEÇO MENU LATERAL -->
     <div class="menuLateral">
@@ -26,7 +26,7 @@
 
 
         <span class="apresentacaoCliente">Olá <span id="b_usuario">visitante</span>, Bem vindo!</span>
-
+        
         <ul class="listaMenuLateral">
             <li><a href="#ultimaDiv">| Home</a></li>
             <li><a href="#ultimaDiv">| Definição</a></li>
@@ -36,7 +36,7 @@
             <li><a href="#ultimaDiv">| Contato</a></li>
             <li><a href="login.html">| Entrar</a></li>
             <li><a href="cadastro.html">| Cadastro</a></li>
-            <li><a href="#ultimaDiv">| Sair</a></li>
+            <li><a href="login.html" onclick="limparSessao()">| Sair</a></li>
         </ul>
 
         <div class="rodape">
@@ -84,11 +84,9 @@
 
 
 <script>
-    console.log(sessionStorage.NOME_USUARIO)
-    console.log('Sessions storage:' + JSON.stringify(sessionStorage))
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO == undefined ? 'Marcos' : sessionStorage.NOME_USUARIO;
-    // validarSessao();
 
+    function sair(){
 
+    }
 
 </script>

@@ -28,7 +28,7 @@ create table skin(
 );
 
 
-create table skinFavorita(
+create table skinQueGosta(
 	fkUsuario int,
     fkSkin int,
     foreign key (fkUsuario) references usuario(idUsuario),
