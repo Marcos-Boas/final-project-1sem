@@ -19,18 +19,32 @@ function entrar(email, senha) {
 }
 
 // Coloque os mesmos parâmetros aqui. Vá para a var instrucao
-function cadastrar(nome, email, data, senha, numero) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha, numero);
+function cadastrar(nome, email, senha ,data) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha, data);
     
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
         INSERT INTO usuario (nomeUsuario, emailUsuario, senhaUsuario, dataNasc) VALUES ('${nome}', '${email}','${senha}', '${data}');
-        insert into informacoesDeContato(numero, fkUsuario) values ('${numero}', '(select idUsuario from usuario where nomeUsuario = '${nome}' and senhaUsuario = '${senha}')');  
-    `;
+        `;
+        // insert into informacoesDeContato(numero, fkUsuario) values ('${numero}', '(select idUsuario from usuario where nomeUsuario = '${nome}' and senhaUsuario = '${senha}')');  
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
+
+function cadastrarNum(num, idUsuario) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha, data);
+    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO usuario (nomeUsuario, emailUsuario, senhaUsuario, dataNasc) VALUES ('${nome}', '${email}','${senha}', '${data}');
+        `;
+        // insert into informacoesDeContato(numero, fkUsuario) values ('${numero}', '(select idUsuario from usuario where nomeUsuario = '${nome}' and senhaUsuario = '${senha}')');  
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 
 module.exports = {
     entrar,
