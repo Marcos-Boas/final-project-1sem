@@ -2,6 +2,8 @@ create database markleberSkins;
 
 use markleberSkins;
 
+-- select * from usuario;
+
 
 create table usuario(
 	idUsuario int primary key auto_increment,
@@ -11,8 +13,12 @@ create table usuario(
 	dataNasc date
 );
 
+
+
+ -- select * from informacoesDeContato;
+
 create table informacoesDeContato(
-	idInformacoesDeContato int,
+	idInformacoesDeContato int auto_increment,
     numero char(11),
     fkUsuario int,
     foreign key (fkUsuario) references usuario(idUsuario),
@@ -36,6 +42,8 @@ create table skinQueGosta(
     foreign key (fkSkin) references skin(idSkin)
 );
 
+
+select * from skin;
 -- League Of Legendes
 insert into skin values 
 	(null, "", "Zap'Maw", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/kog-maw-zap-maw.jpg'),

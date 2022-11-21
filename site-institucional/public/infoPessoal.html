@@ -31,38 +31,18 @@
     <a href="index.html"><img src="assets/imgs/setaEsquerda.png" alt="" class="logo" /></a>
 
     <div class="apresentacaoMenu" id="apresentacaoMenu">
+
       <div class="recepcao">
         <h1>Seja bem-vindo!</h1>
-        <h3>Por favor, insira suas informações</h3>
-      </div>
-
-      <label for="in_nomeCompleto">Nome completo</label> <br />
-      <input type="text" id="in_nomeCompleto" placeholder="ex: Jose Alves dos Santos" /><br />
-
-      <label for="in_dataNasc">Data de nascimento</label> <br />
-      <input type="date" id="in_dataNasc" /><br />
-
-      <label for="in_email">Email</label> <br />
-      <input type="text" id="in_email" placeholder="email@email.com" /><br />
-
-      <label for="in_email">Senha</label> <br />
-      <input type="text" id="in_senha" placeholder="••••••••••" /><br />
-
-      <label for="in_senha">Confirmar senha</label> <br />
-      <input type="text" id="in_senhaConfirmada" placeholder="••••••••••" />
-
-      <div class="subCampos">
-        <div class="campoCheck">
-          <input type="checkbox" class="inputCheck" />
-          Aceitar todos os termos
-        </div>
-        <!-- <span class="esqueceuSenha">Esqueceu a senha</span> -->
-      </div>
-
-      <button onclick="cadastrar()">Cadastrar</button>
+        <h3>Por favor, insira seu número de contato</h3>
     </div>
 
-    <span class="spanLink">Já possui uma conta? <a href="login.html">Entre</a></span>
+    <label for="in_nomeCompleto">Número</label> <br>
+    <input type="text" id="in_num" placeholder="ex: xx xxxxx xxxx"><br>
+
+    <button onclick="cadastrarNum()">Continuar</button>
+
+    <!-- <span class="spanLink">Já possui uma conta? <a href="login.html">Entre</a></span> -->
 
     <span class="copyright">&copy; Marcos Henrique - SPTech / ADS</span>
   </div>
@@ -71,19 +51,8 @@
 </html>
 
 <script>
-  function telaDeInfomacaoPessoal() {
-    apresentacaoMenu.innerHTML = `         
-                                    <div class="recepcao">
-                                        <h1>Seja bem-vindo!</h1>
-                                        <h3>Por favor, insira seu número de contato</h3>
-                                    </div>
 
-                                    <label for="in_nomeCompleto">Número</label> <br>
-                                    <input type="text" id="in_num" placeholder="ex: xx xxxxx xxxx"><br>
-
-                                    <button onclick="cadastrarNum()">Continuar</button>
-                                    `;
-  }
+    var fkUsuario = sessionStorage.getItem('ID_USUARIO');
 
   function telaPersonagensFavoritos() {
     apresentacaoMenu.innerHTML = `         
@@ -103,73 +72,6 @@
                                     `;
   }
 
-  function cadastrar() {
-    // aguardar();
-
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
-    var nomeVar = in_nomeCompleto.value;
-    var emailVar = in_email.value;
-    var senhaVar = in_senha.value;
-    var dataVar = in_dataNasc.value;
-    var confirmacaoSenhaVar = in_senhaConfirmada.value;
-
-
-    if (
-      nomeVar == "" ||
-      emailVar == "" ||
-      senhaVar == "" ||
-      dataVar == "" ||
-      confirmacaoSenhaVar == ""
-    ) {
-      alert("Preencha todas as informações!");
-
-      finalizarAguardar();
-      return false;
-    }
-
-    // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        nomeServer: nomeVar,
-        emailServer: emailVar,
-        senhaServer: senhaVar,
-        dataServer: dataVar,
-      }),
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
-
-        if (resposta.ok) {
-          // cardErro.style.display = "block";
-
-          // alert(
-          //   "Cadastro realizado com sucesso! Redirecionando para tela de Login..."
-          // );
-          sessionStorage.ID_USUARIO = 
-
-          setTimeout(() => {
-            window.location = "login.html";
-          }, "2000");
-
-
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
-        }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
-      });
-
-    return false;
-  }
 
   function cadastrarNum() {
     // aguardar();
@@ -177,7 +79,7 @@
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
     var num = in_num.value;
-    var fkUsuario = 1;
+
     console.log("fk do usúario: " + fkUsuario)
 
     if (num == "" || fkUsuario == "") {

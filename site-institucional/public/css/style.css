@@ -7,9 +7,32 @@
     scrollbar-color: #554e9a #9d9fe9; 
 }
 
-*::-webkit-scrollbar{
-    scrollbar-width:thin;  
-    scrollbar-color: #554e9a #9d9fe9; 
+body::-webkit-scrollbar {
+    width: 6px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #554e9a;
+    background: #554e9a;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #9d9fe9;
+    background: #554e9a;
+    border-radius: 20px;
+}
+body::-webkit-scrollbar {
+    scrollbar-width:thin; 
+    background: #554e9a;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #9d9fe9;
+}
+
+body::-webkit-scrollbar-thumb {
+    /* background-color: #554e9a; */
+    border-radius: 20px;
 }
 
 html{
@@ -37,7 +60,7 @@ a{
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 20vw;
+    width: 15vw;
     background-color: #554e9a;
     color: #fefefe;
     position: fixed;
@@ -60,12 +83,14 @@ a{
     font-size: 18px;
 }
 
-.listaMenuLateral li{
+
+
+.subItems{
     margin-bottom: 8%;   
     transition: 0.1s;
 }
 
-.listaMenuLateral li:hover{
+.subItems:hover{
     cursor: pointer;
     transform: scale(1);
     font-weight: bold;
@@ -73,14 +98,30 @@ a{
     
 }
 
-.listaMenuLateral li:after{
+.subItems:after{
     content: " <";
     visibility: hidden;
 }
 
-.listaMenuLateral li:hover:after{
+.subItems:hover:after{
     visibility: visible;
     transform: scaleX(1);
+}
+
+.linkAtivo{
+    font-weight: bold;
+    margin-bottom: 8%; 
+}
+
+.linkAtivo::after{
+    content: " <";
+    visibility: hidden;
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.subMenu{
+    margin-left:15%;
 }
 
 
@@ -109,6 +150,18 @@ a{
 /* CORPO */
 /* CARD */
 
+.corRoxa{
+    color:#554e9a;
+}
+
+.corBranca{
+    color: #fff;
+}
+
+.preto{
+    color: #555;
+}
+
 .primeiraCor{
     background-color: #9295eb;
 }
@@ -119,12 +172,23 @@ a{
 
 
 .corpo{
-    width: 80vw;
-    margin-left: 20vw;
+    width: 85vw;
+    margin-left: 15vw;
 }
 
 .card{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.card2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100vh;
 }
@@ -134,14 +198,13 @@ a{
 .imagemCard1{
     background-image: url('../assets/imgs/skinsLol.jpg');
     background-size: cover;
-    background-position: center;
-    
+    background-position: center;   
 }
 
 .opaca{
     display:flex;
-    flex-direction: column;
-    justify-content: center;
+    
+    justify-content: space-around;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
@@ -149,27 +212,51 @@ a{
     backdrop-filter: blur(7px);   
 }
 
+.texto{
+    width: 50%;
+}
+
 .tituloCard{
-    /* margin-top: 8%; */
     margin-bottom: 2%;
-    color:#fff;
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
-
-    /* margin-left: 10%; */
 }
 
 .textoCard{
-    color:#fff;
     font-size: 2rem;
     font-weight: bold;
     text-align: justify;
     margin: 0 5%;
- 
+}
+
+.skinCarrosel{
+    width: 45%;
+    height: 80%;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition:ease-in-out 0.5s;
 }
 
 /* FIM - CARD 1 - PQ SKINS? */
 
 
 /* CARD 2 - EXEMPLOS */
+.imgApresentacao{
+    margin-top: 2%;
+}
+
+
+
+/* FIM CARD2 */
+
+/* CARD 3 */
+
+.myChartJs{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+}

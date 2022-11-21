@@ -3,40 +3,47 @@
 
 <head>
     <script src="./js/funcoes.js"></script>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./js/funcoes.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="shortcut icon" href="assets/imgs/logoPagina.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+        rel="stylesheet" />
+    <link rel="shortcut icon" href="assets/imgs/logoPagina.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>MS | Home</title>
 </head>
 
-<body onload="validarSessao()">
-
+<body onload="validarSessao(), sortearimg()">
     <!-- COMEÇO MENU LATERAL -->
     <div class="menuLateral">
-
         <img src="assets/imgs/logoProjeto.png" alt="Logo Markléber Skins" />
 
-
         <span class="apresentacaoCliente">Olá <span id="b_usuario">visitante</span>, Bem vindo!</span>
-        
+
         <ul class="listaMenuLateral">
-            <li><a href="#ultimaDiv">| Home</a></li>
-            <li><a href="#ultimaDiv">| Definição</a></li>
-            <li><a href="#ultimaDiv">| Exemplos</a></li>
-            <li><a href="#ultimaDiv">| Dados Monetários</a></li>
-            <li><a href="#ultimaDiv">| Escolha a sua</a></li>
-            <li><a href="#ultimaDiv">| Contato</a></li>
-            <li id="login"><a href="login.html">| Entrar</a></li>
-            <li id="login"><a href="cadastro.html">| Cadastro</a></li>
-            <li id="sair"><a href="login.html" onclick="limparSessao()">| Sair</a></li>
+            <li class="linkAtivo"><a href="#home">| Home</a></li>
+            <ul class="subMenu">
+                <li class="subItems"><a href="#definicao">| Definição</a></li>
+                <li class="subItems"><a href="#exemplos">| Exemplos</a></li>
+                <li class="subItems">
+                    <a href="#dadosMonetarios">| Dados Monetários</a>
+                </li>
+                <li class="subItems"><a href="#escolhaSua">| Escolha a sua</a></li>
+                <li class="subItems"><a href="#contato">| Contato</a></li>
+            </ul>
+            <li class="subItems"><a href="sobreMim.html">| Sobre mim</a></li>
+            <li class="subItems" id="infoPessoal"><a href="infoPessoal.html">| Informações pessoais</a></li>
+            <li class="subItems" id="login"><a href="login.html">| Entrar</a></li>
+            <li class="subItems" id="cadastro">
+                <a href="cadastro.html">| Cadastro</a>
+            </li>
+            <li class="subItems" id="sair">
+                <a href="login.html" onclick="limparSessao()">| Sair</a>
+            </li>
         </ul>
 
         <div class="rodape">
@@ -45,7 +52,6 @@
             <img src="assets/imgs/twitter.png" alt="Logo do twitter" />
         </div>
         <span class="copyright">&copy; Marcos Henrique - SPTech / ADS</span>
-
     </div>
 
     <!-- FINAL MENU LATERAL -->
@@ -53,45 +59,118 @@
     <div class="corpo">
         <div class="card imagemCard1">
             <div class="opaca">
+                <div class="texto">
+                    <div class="tituloCard corBranca">POR QUE SKINS?</div>
 
-                <div class="tituloCard">POR QUE SKINS?</div>
+                    <div class="textoCard corBranca">
+                        Skins não são apenas aparências diferentes para personagens em
+                        jogos online, elas causam diversos sentimentos em quem as usam.
+                        Desde sensação de poder, coragem entre outros... <br /><br />
 
-                <div class="textoCard">Skins não são apenas aparências diferentes para personagens
-                    em jogos online, elas causam diversos sentimentos em quem
-                    as usam. Desde sensação de poder, coragem entre outros... <br><br>
-
-                    Iremos falar mais sobre isso logo abaixo! <img src="" alt="">
+                        Iremos falar mais sobre isso logo abaixo!
+                    </div>
                 </div>
-                <!-- <img src="imgs/imagem3.png" alt="" width="40%"> -->
 
+                <div class="skinCarrosel" id="skinCarrosel"></div>
+            </div>
+        </div>
+        <div class="card segundaCor">
+            <div class="tituloCard corRoxa">Mas o que seria uma Skin?</div>
+
+            <div class="textoCard corRoxa">
+                Skin ou “Pele“, é um visual alternativo dado a um programa
+                computacional, são recursos que modificam comumente somente o visual
+                dos personagens, mas também pode alterar os cenários e demais
+                elementos que o jogo possua.
+            </div>
+
+            <img src="assets/imgs/exemploDefinicao.jpg" class="imgApresentacao" alt="">
+        </div>
+        <div class="card">
+            <div class="tituloCard preto">Mundo financeiro</div>
+
+            <div class="textoCard preto">
+                Segundo o site da globo, apenas o League of Legends arrecadou mais de R$37 milhões para a caridade com a
+                venda de somente uma skin (Ornn sabugueiro). Além de ajudar as instituições e as pessoas que precisam
+                desse dinheiro, também satisfez os usuários que a compraram e consequentemente agregou valor ao jogo e a
+                empresa (Riot). Segue uma relação com o faturamento desse e outros jogos no mercado de skins:
+            </div>
+
+            <div class="myChartJs">
+                <canvas id="myChart"></canvas>
             </div>
 
         </div>
-        <div class="card segundaCor">
-
-        </div>
-        <div class="card">
-
-        </div>
-        <div class="card">
-
-        </div>
+        <div class="card"></div>
     </div>
-
 </body>
 
 </html>
 
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script>
 
-    if(sessionStorage.NOME_USUARIO != null || sessionStorage.NOME_USUARIO != undefined){
-        document.getElementById("login").style.display = 'none'
-        document.getElementById("sair").style.display = 'block'
-    }else{
-        document.getElementById("login").style.display = 'block'
-        document.getElementById("sair").style.display = 'none'
 
+
+    const ctx = document.getElementById('myChart');
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Counter Strike: Global offensive', 'League of Legends', 'Valorant', 'Free fire', 'Fortnite'],
+            datasets: [{
+                label: 'Faturamento (em bilhões)',
+                data: [10, 1.75, 1, 20, 2.8],
+                borderWidth: 1,
+                borderColor: '#CCC9FF',
+                backgroundColor: '#CCC9DC',
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+
+</script>
+
+<script>
+    if (sessionStorage.NOME_USUARIO != null || sessionStorage.NOME_USUARIO != undefined) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("cadastro").style.display = "none";
+        document.getElementById("infoPessoal").style.display = "block";
+        document.getElementById("sair").style.display = "block";
+    } else {
+        document.getElementById("login").style.display = "block";
+        document.getElementById("cadastro").style.display = "block";
+        document.getElementById("infoPessoal").style.display = "none";
+        document.getElementById("sair").style.display = "none";
     }
 
+    var caminhoImgs = ['https://i.pinimg.com/564x/10/c2/8c/10c28cce44d1b5c723b22c45f6b7def6.jpg',
+        'https://i.pinimg.com/564x/45/b4/45/45b4451aa0e90bbb856603db99bbbc93.jpg',
+        'https://i.pinimg.com/564x/67/a4/8d/67a48d564e086eb0c256831669cfd9c2.jpg',
+        'https://steamuserimages-a.akamaihd.net/ugc/1931509974427378219/C4F2117625B4EFA8A7BE202EBE674A4F126D9C82/?imw=1920&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false',
+        'https://i.pinimg.com/564x/52/25/06/522506e66e88d8fcfac16cb00c04c6b2.jpg',
+        'https://i.pinimg.com/564x/41/58/95/4158951016e6277616121599bd7ca66c.jpg',
+        'https://i.pinimg.com/564x/01/7b/75/017b758a1a2ffc4feab524d5b77c1502.jpg',
+        'https://i.pinimg.com/564x/3a/39/14/3a391415d1aeedb0de6c4479c91d3559.jpg',
+        'https://i.pinimg.com/564x/1e/e3/68/1ee368bc67ba7878fe6b3567ad2e88d8.jpg']
+
+    function sortearimg() {
+        num = parseInt(Math.random() * (caminhoImgs.length))
+
+        document.getElementById('skinCarrosel').style.backgroundImage = `url('${caminhoImgs[num]}')`
+        setTimeout(() => {
+            sortearimg();
+        }, "2000");
+
+
+    }
 </script>

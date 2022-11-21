@@ -108,20 +108,14 @@ function cadastrarNum(req, res) {
 
 
     // Faça as validações dos valores
-    if (nome == undefined) {
-        res.status(400).send("Seu nome está undefined!");
-    } else if (email == undefined) {
-        res.status(400).send("Seu email está undefined!");
-    } else if (senha == undefined) {
-        res.status(400).send("Sua senha está undefined!");
-    } else if (data == undefined) {
-        res.status(400).send("Sua data está undefined!");
-    } else if (numero == undefined) {
+    if (num == undefined) {
         res.status(400).send("Seu número está undefined!");
+    } else if (fkUsuario == undefined) {
+        res.status(400).send("Seu fkusuario está undefined!");
     } else {
         
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, email, data, senha, numero)
+        usuarioModel.cadastrarNum(num, fkUsuario)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -141,7 +135,8 @@ function cadastrarNum(req, res) {
 
 module.exports = {
     entrar,
-    cadastrar,
+    cadastrar, 
+    cadastrarNum, 
     listar,
     testar
 }
