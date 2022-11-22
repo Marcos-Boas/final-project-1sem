@@ -18,6 +18,8 @@
 </head>
 
 <body onload="validarSessao(), sortearimg()">
+
+    <img src="./assets/imgs/surgindo.png" alt=""class="surgindo">
     <!-- COMEÇO MENU LATERAL -->
     <div class="menuLateral">
         <img src="assets/imgs/logoProjeto.png" alt="Logo Markléber Skins" />
@@ -83,25 +85,38 @@
                 dos personagens, mas também pode alterar os cenários e demais
                 elementos que o jogo possua.
             </div>
-
+            
             <img src="assets/imgs/exemploDefinicao.jpg" class="imgApresentacao" alt="">
         </div>
-        <div class="card">
-            <div class="tituloCard preto">Mundo financeiro</div>
-
-            <div class="textoCard preto">
-                Segundo o site da globo, apenas o League of Legends arrecadou mais de R$37 milhões para a caridade com a
-                venda de somente uma skin (Ornn sabugueiro). Além de ajudar as instituições e as pessoas que precisam
-                desse dinheiro, também satisfez os usuários que a compraram e consequentemente agregou valor ao jogo e a
-                empresa (Riot). Segue uma relação com o faturamento desse e outros jogos no mercado de skins:
+        <div class="card imagemCard3">
+            <div class="opacaCard3">
+                <div class="alinhamentoCorpo">
+                    <div class="tituloCard corBranca">Mundo financeiro</div>
+                    
+                    <hr />
+                    
+                    <div class="textoCard corBranca">
+                        Segundo o site da globo, apenas o League of Legends arrecadou mais de R$37 milhões para a
+                        caridade
+                        com a
+                        venda de somente uma skin (Ornn sabugueiro). Além de ajudar as instituições e as pessoas que
+                        precisam
+                        desse dinheiro, também satisfez os usuários que a compraram e consequentemente agregou valor ao
+                        jogo
+                        e a
+                        empresa (Riot). Segue uma relação com o faturamento desse e outros jogos no mercado de skins:
+                    </div>
+                </div>
             </div>
-
+            
+           
+        </div>
+        <div class="cardGrafico">
+            <div class="tituloCard corRoxa  ">Venda de skins dos principais jogos</div>
             <div class="myChartJs">
                 <canvas id="myChart"></canvas>
-            </div>
-
+            </div> 
         </div>
-        <div class="card"></div>
     </div>
 </body>
 
@@ -124,8 +139,8 @@
                 label: 'Faturamento (em bilhões)',
                 data: [10, 1.75, 1, 20, 2.8],
                 borderWidth: 1,
-                borderColor: '#CCC9FF',
-                backgroundColor: '#CCC9DC',
+                borderColor: '#00f',
+                backgroundColor: '#554e9a',
             }]
         },
         options: {

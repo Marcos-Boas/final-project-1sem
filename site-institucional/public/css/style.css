@@ -7,6 +7,10 @@
     scrollbar-color: #554e9a #9d9fe9; 
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body::-webkit-scrollbar {
     width: 6px;
 }
@@ -35,13 +39,24 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
 body {
     display: flex;
-    
+}
+
+.surgindo{
+    position: fixed;
+    display: block;
+    top: -5%;
+    right: 0;
+    transform: rotate(180deg);
+    z-index: 1;
+    width: 5%;
+    transition: 2s;
+}
+
+.surgindo:hover{
+    top: -15%;
+    transition: all .2s ease-in-out;
 }
 
 ul {
@@ -60,7 +75,7 @@ a{
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 15vw;
+    width: 20vw;
     background-color: #554e9a;
     color: #fefefe;
     position: fixed;
@@ -172,8 +187,8 @@ a{
 
 
 .corpo{
-    width: 85vw;
-    margin-left: 15vw;
+    width: 80vw;
+    margin-left: 20vw;
 }
 
 .card{
@@ -203,7 +218,6 @@ a{
 
 .opaca{
     display:flex;
-    
     justify-content: space-around;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
@@ -245,6 +259,7 @@ a{
 /* CARD 2 - EXEMPLOS */
 .imgApresentacao{
     margin-top: 2%;
+    width: 50%;
 }
 
 
@@ -253,10 +268,58 @@ a{
 
 /* CARD 3 */
 
+.alinhamentoCorpo{
+    height: 100%;
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+}
+
+
+hr{
+    width: 100%;
+    background-color:#554e9a;
+    transform: rotate(90deg);
+}
+
+.imagemCard3{
+    background-image: url('../assets/imgs/onrnSabugueiro.jfif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.opacaCard3{
+    display:flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    
+    
+    backdrop-filter: blur(5px);  
+}
+
+/* CARD 4 */
+
+.cardGrafico{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+    height: 100vh;   
+}
+
+.cardGrafico .tituloCard{
+    margin-top: 3%;
+}
+
+
 .myChartJs{
-    margin-top: 2%;
+    
     display: flex;
     justify-content: center;
-    width: 100%;
-    height: 50%;
+    width: 90%;
+    /* height: 100%; */
 }
+
