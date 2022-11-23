@@ -4,13 +4,23 @@ use markleberSkins;
 
 -- select * from usuario;
 
+create table skinFavotira(
+	idSkin int primary key auto_increment,
+    nomePersonagem varchar(45),
+    nomeSkin varchar(45),
+    jogo varchar(45),
+    caminhoImg varchar(500)
+);
+
 
 create table usuario(
 	idUsuario int primary key auto_increment,
     nomeUsuario varchar(45),
     emailUsuario varchar(45),
     senhaUsuario varchar(45),
-	dataNasc date
+	dataNasc date,
+    fkSkinFavorita int,
+    foreign key (fkSkinFavorita) REFERENCES skinFavorita(idSkinFavorita)
 );
 
 
@@ -26,28 +36,12 @@ create table informacoesDeContato(
 );
 
 
-create table skin(
-	idSkin int primary key auto_increment,
-    nomePersonagem varchar(45),
-    nomeSkin varchar(45),
-    jogo varchar(45),
-    caminhoImg varchar(1000)
-);
 
-
-create table skinQueGosta(
-	fkUsuario int,
-    fkSkin int,
-    foreign key (fkUsuario) references usuario(idUsuario),
-    foreign key (fkSkin) references skin(idSkin)
-);
-
-
-select * from skin;
+-- select * from skin;
 -- League Of Legendes
 insert into skin values 
-	(null, "", "Zap'Maw", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/kog-maw-zap-maw.jpg'),
-    (null, "", "Bee'Maw", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/kog-maw-bee-maw.jpg'),
+	(null, "Kow'Maw", "Zap'Maw", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/kog-maw-zap-maw.jpg'),
+    (null, "Kow'Maw", "Bee'Maw", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/kog-maw-bee-maw.jpg'),
     (null, "Kog'Maw", "Battlecast ", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/kogmaw-battlecast.jpg'),
     (null, "Graves", "EDG", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/graves-sentinel.jpg'),
     (null, "Graves", "Sentinel", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/graves-sentinel.jpg'),
