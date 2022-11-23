@@ -43,6 +43,8 @@ body {
     display: flex;
 }
 
+/* EASTER EGG */
+
 .surgindo{
     position: fixed;
     display: block;
@@ -58,6 +60,9 @@ body {
     top: -15%;
     transition: all .2s ease-in-out;
 }
+/* FIM EASTER EGG */
+
+/* GERAIS */
 
 ul {
     list-style: none;
@@ -68,6 +73,45 @@ a{
     text-decoration: none;
     color:#fff;
 }
+
+.corRoxa{
+    color:#554e9a;
+}
+
+.corBranca{
+    color: #fff;
+}
+
+.preto{
+    color: #555;
+}
+
+.primeiraCor{
+    background-color: #9295eb;
+}
+
+.segundaCor{
+    background-color: #f2f6fa;
+}
+
+.tituloCard{
+    margin-bottom: 2%;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.textoCard{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: justify;
+    margin: 0 5%;
+    
+}
+
+
+/* FIM GERAIS */
+
 
 
 /* MENU LATERAL */
@@ -163,49 +207,27 @@ a{
 
 
 /* CORPO */
-/* CARD */
-
-.corRoxa{
-    color:#554e9a;
-}
-
-.corBranca{
-    color: #fff;
-}
-
-.preto{
-    color: #555;
-}
-
-.primeiraCor{
-    background-color: #9295eb;
-}
-
-.segundaCor{
-    background-color: #f2f6fa;
-}
-
 
 .corpo{
     width: 80vw;
     margin-left: 20vw;
 }
+/* FIM CORPO */
 
-.card{
+
+/* CARDS*/
+
+
+.card2, .card{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
 }
 
-.card2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
+.card{
+    flex-direction: column;
 }
 
 /* CARD 1 - PQ SKINS? */
@@ -230,20 +252,6 @@ a{
     width: 50%;
 }
 
-.tituloCard{
-    margin-bottom: 2%;
-    font-size: 3rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-.textoCard{
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: justify;
-    margin: 0 5%;
-}
-
 .skinCarrosel{
     width: 45%;
     height: 80%;
@@ -253,20 +261,39 @@ a{
     transition:ease-in-out 0.5s;
 }
 
-/* FIM - CARD 1 - PQ SKINS? */
+/* FIM CARD 1 - PQ SKINS? */
 
 
-/* CARD 2 - EXEMPLOS */
+/* CARD 2 - DEFINIÇÃO */
 .imgApresentacao{
+    background-image: url("../assets/imgs/exemploDefinicao.jpg");
     margin-top: 2%;
-    width: 50%;
+    margin-bottom: 1%;
+    width: 80%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* FIM CARD2 */
+
+/* CARD 3 - MAIS EXEMPLOS */
+
+.imgExemplos{
+    width: 80%;
+    height: 90%;
+    padding: 5%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.5s;
+    margin-bottom: 1%;
 }
 
 
+/* FIM CARD 3 - MAIS EXEMPLOS */
 
-/* FIM CARD2 */
-
-/* CARD 3 */
+/* CARD 4 FINANCEIRO */
 
 .alinhamentoCorpo{
     height: 100%;
@@ -283,15 +310,15 @@ hr{
     transform: rotate(90deg);
 }
 
-.imagemCard3{
+.imagemCardFinanceiro{
     background-image: url('../assets/imgs/onrnSabugueiro.jfif');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.opacaCard3{
+.opacaCardFinanceiro{
     display:flex;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 100%;
     
@@ -299,7 +326,9 @@ hr{
     backdrop-filter: blur(5px);  
 }
 
-/* CARD 4 */
+/* FIM CARD 4 FINANCEIRO */
+
+/* CARD 5 GRÁFICOS */
 
 .cardGrafico{
     display: flex;
@@ -323,3 +352,11 @@ hr{
     /* height: 100%; */
 }
 
+/* FIM CARD 5 GRÁFICOS */
+
+/* CARD 6 ESCOLHA A SUA */
+
+
+
+
+/* FIM CARD 6 ESCOLHA A SUA */

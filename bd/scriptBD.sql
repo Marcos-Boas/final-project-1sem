@@ -38,19 +38,6 @@ create table informacoesDeContato(
 
 
 -- select * from skin;
--- League Of Legendes
-insert into skin values 
-	(null, "Kow'Maw", "Zap'Maw", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/kog-maw-zap-maw.jpg'),
-    (null, "Kow'Maw", "Bee'Maw", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/kog-maw-bee-maw.jpg'),
-    (null, "Kog'Maw", "Battlecast ", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/kogmaw-battlecast.jpg'),
-    (null, "Graves", "EDG", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/graves-sentinel.jpg'),
-    (null, "Graves", "Sentinel", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/graves-sentinel.jpg'),
-    (null, "Graves", "Battle Professor", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/graves-battle-professor.jpg'),
-    (null, "Lee Sin", "Storm Dragon", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/lee-sin-storm-dragon.jpg'),
-    (null, "Lee Sin", "FPX", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/lee-sin-fpx.jpg'),
-    (null, "Lee Sin", "Muay Thai", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/lee-sin-muay-thai.jpg');
-    
-
 -- Cs: go
 insert into skin values
 	(null, 'AWP', 'Asiimov', 'Counter Strike: Global Offensive', 'https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9hd3BfY3VfYXdwX2FzaW1vdl9saWdodF9sYXJnZS4zMmQ5MDQ1ZjhhMmJjZDEzY2ExODM5MGNjOWZkODIwMjZlNzE5NWFiLnBuZw--/auto/auto/85/notrim/3f3705a2adf75e891fdb212e6309755e.webp'),
@@ -75,4 +62,15 @@ insert into skin values
     (null, "Spectre", "BlastX", 'Valorant', 'https://static.wikia.nocookie.net/valorant/images/c/c6/BlastX_Spectre.png/revision/latest/scale-to-width-down/125?cb=20210708104407'),
     (null, "Spectre", "Horizon", 'Valorant', 'https://static.wikia.nocookie.net/valorant/images/8/82/Horizon_Spectre.png/revision/latest/scale-to-width-down/125?cb=20210708104951');
     
+-- League Of Legendes
+insert into skin values 
+	(null, "Kow'Maw", "Zap'Maw", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/kog-maw-zap-maw.jpg'),
+    (null, "Kow'Maw", "Bee'Maw", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/kog-maw-bee-maw.jpg'),
+    (null, "Kog'Maw", "Battlecast ", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/kogmaw-battlecast.jpg'),
+    (null, "Graves", "EDG", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/graves-sentinel.jpg'),
+    (null, "Graves", "Sentinel", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/graves-sentinel.jpg'),
+    (null, "Graves", "Battle Professor", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/graves-battle-professor.jpg'),
+    (null, "Lee Sin", "Storm Dragon", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/lee-sin-storm-dragon.jpg'),
+    (null, "Lee Sin", "FPX", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/lee-sin-fpx.jpg'),
+    (null, "Lee Sin", "Muay Thai", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/lee-sin-muay-thai.jpg');
     

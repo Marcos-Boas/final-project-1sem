@@ -12,6 +12,7 @@ function validarSessao() {
         // window.alert(`Seja bem-vindo, ${nome}!`);
         b_usuario.innerHTML = nome;
         
+        
         // finalizarAguardar();
     } else {
         b_usuario.innerHTML = 'visitante';
