@@ -24,4 +24,8 @@ router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
 
+router.put("/editar/:fkSkin", function (req, res) {
+    usuarioController.editar(req, res);
+});
+
 module.exports = router;

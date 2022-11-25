@@ -18,8 +18,7 @@
 </head>
 
 <body onload="validarSessao(), sortearimg(), trocarExemplo()">
-
-    <img src="./assets/imgs/surgindo.png" alt="" class="surgindo">
+    <img src="./assets/imgs/surgindo.png" alt="" class="surgindo" />
     <!-- COMEÇO MENU LATERAL -->
     <div class="menuLateral">
         <img src="assets/imgs/logoProjeto.png" alt="Logo Markléber Skins" />
@@ -31,15 +30,23 @@
             <ul class="subMenu">
                 <li class="subItems"><a href="#definicao">| Definição</a></li>
                 <li class="subItems"><a href="#exemplos">| Exemplos</a></li>
-                <li class="subItems"><a href="#mundoFinanceiro">| Dados Monetários</a></li>
+                <li class="subItems">
+                    <a href="#mundoFinanceiro">| Dados Monetários</a>
+                </li>
                 <li class="subItems"><a href="#escolhaSua">| Escolha a sua</a></li>
                 <li class="subItems"><a href="#contato">| Contato</a></li>
             </ul>
             <li class="subItems"><a href="sobreMim.html">| Sobre mim</a></li>
-            <li class="subItems" id="infoPessoal"><a href="infoPessoal.html">| Informações pessoais</a></li>
+            <li class="subItems" id="infoPessoal">
+                <a href="infoPessoal.html">| Informações pessoais</a>
+            </li>
             <li class="subItems" id="login"><a href="login.html">| Entrar</a></li>
-            <li class="subItems" id="cadastro"><a href="cadastro.html">| Cadastro</a></li>
-            <li class="subItems" id="sair"><a href="login.html" onclick="limparSessao()">| Sair</a></li>
+            <li class="subItems" id="cadastro">
+                <a href="cadastro.html">| Cadastro</a>
+            </li>
+            <li class="subItems" id="sair">
+                <a href="login.html" onclick="limparSessao()">| Sair</a>
+            </li>
         </ul>
 
         <div class="rodape">
@@ -53,7 +60,6 @@
     <!-- FINAL MENU LATERAL -->
 
     <div class="corpo">
-
         <!-- CARD 1 -->
         <div class="card imagemCard1" id="motivo">
             <div class="opaca">
@@ -74,7 +80,6 @@
         </div>
         <!-- FIM CARD 1 -->
 
-
         <!-- CARD 2 -->
         <div class="card segundaCor" id="definicao">
             <div class="tituloCard corRoxa">Mas o que seria uma Skin?</div>
@@ -89,21 +94,15 @@
         </div>
         <!-- FIM CARD 2 -->
 
-
         <!-- CARD 3 -->
         <div class="card primeiraCor" id="exemplos">
             <div class="tituloCard corBranca">Mais Exemplos</div>
 
             <div class="textoCard corBranca" id="textoExemplos"></div>
 
-            <div class="imgExemplos" id="imgExemplos">
-
-            </div>
-
-
+            <div class="imgExemplos" id="imgExemplos"></div>
         </div>
         <!-- FIM CARD 3 -->
-
 
         <!-- CARD 4 -->
         <div class="card imagemCardFinanceiro" id="mundoFinanceiro">
@@ -114,15 +113,13 @@
                     <hr />
 
                     <div class="textoCard corBranca">
-                        Segundo o site da globo, apenas o League of Legends arrecadou mais de R$37 milhões para a
-                        caridade
-                        com a
-                        venda de somente uma skin (Ornn sabugueiro). Além de ajudar as instituições e as pessoas que
-                        precisam
-                        desse dinheiro, também satisfez os usuários que a compraram e consequentemente agregou valor ao
-                        jogo
-                        e a
-                        empresa (Riot). Segue uma relação com o faturamento desse e outros jogos no mercado de skins:
+                        Segundo o site da globo, apenas o League of Legends arrecadou mais
+                        de R$37 milhões para a caridade com a venda de somente uma skin
+                        (Ornn sabugueiro). Além de ajudar as instituições e as pessoas que
+                        precisam desse dinheiro, também satisfez os usuários que a
+                        compraram e consequentemente agregou valor ao jogo e a empresa
+                        (Riot). Segue uma relação com o faturamento desse e outros jogos
+                        no mercado de skins:
                     </div>
                 </div>
             </div>
@@ -131,64 +128,73 @@
 
         <!-- CARD 5 -->
         <div class="cardGrafico" id="tabelaFinanceira">
-            <div class="tituloCard corRoxa ">Venda de skins dos principais jogos</div>
+            <div class="tituloCard corRoxa">
+                Venda de skins dos principais jogos
+            </div>
             <div class="myChartJs">
                 <canvas id="myChart"></canvas>
             </div>
         </div>
         <!-- FIM CARD 5 -->
 
-
         <!-- CARD 6 -->
         <div class="card primeiraCor" id="escolhaSua">
             <div class="tituloCard corBranca">Escolha a sua favorita</div>
-            <div class="escolhaDeSkin" id="escolhaDeSkin">
-
-            </div>
+            <div class="escolhaDeSkin" id="escolhaJogo"></div>
+            <div class="escolhaDeSkin" id="escolhaPersonagem"></div>
+            <div class="escolhaDeSkin" id="escolhaSkin"></div>
+            <div class="escolhaDeSkin" id="imgSkinEscolhida"></div>
         </div>
-        <!-- FIM CARD 6 -->
 
+        <!-- FIM CARD 6 -->
     </div>
 </body>
 
 </html>
 
-
 <!-- CHART JS -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-    const ctx = document.getElementById('myChart');
+    const ctx = document.getElementById("myChart");
 
     new Chart(ctx, {
-        type: 'bar',
+        type: "bar",
         data: {
-            labels: ['Counter Strike: Global offensive', 'League of Legends', 'Valorant', 'Free fire', 'Fortnite'],
-            datasets: [{
-                label: 'Faturamento (em bilhões)',
-                data: [10, 1.75, 1, 20, 2.8],
-                borderWidth: 1,
-                borderColor: '#00f',
-                backgroundColor: '#554e9a',
-            }]
+            labels: [
+                "Counter Strike: Global offensive",
+                "League of Legends",
+                "Valorant",
+                "Free fire",
+                "Fortnite",
+            ],
+            datasets: [
+                {
+                    label: "Faturamento (em bilhões)",
+                    data: [10, 1.75, 1, 20, 2.8],
+                    borderWidth: 1,
+                    borderColor: "#00f",
+                    backgroundColor: "#554e9a",
+                },
+            ],
         },
         options: {
             scales: {
                 y: {
-                    beginAtZero: true
-                }
-            }
-        }
+                    beginAtZero: true,
+                },
+            },
+        },
     });
 </script>
 <!-- FIM CHART JS -->
 
-
-
-
 <!-- ROTAÇÃO DAS IMAGENS -->
 <script>
-    if (sessionStorage.NOME_USUARIO != null || sessionStorage.NOME_USUARIO != undefined) {
+    if (
+        sessionStorage.NOME_USUARIO != null ||
+        sessionStorage.NOME_USUARIO != undefined
+    ) {
         document.getElementById("login").style.display = "none";
         document.getElementById("cadastro").style.display = "none";
         document.getElementById("infoPessoal").style.display = "block";
@@ -200,271 +206,377 @@
         document.getElementById("sair").style.display = "none";
     }
 
-    var caminhoImgs = ['https://i.pinimg.com/564x/10/c2/8c/10c28cce44d1b5c723b22c45f6b7def6.jpg',
-        'https://i.pinimg.com/564x/45/b4/45/45b4451aa0e90bbb856603db99bbbc93.jpg',
-        'https://i.pinimg.com/564x/67/a4/8d/67a48d564e086eb0c256831669cfd9c2.jpg',
-        'https://steamuserimages-a.akamaihd.net/ugc/1931509974427378219/C4F2117625B4EFA8A7BE202EBE674A4F126D9C82/?imw=1920&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false',
-        'https://i.pinimg.com/564x/52/25/06/522506e66e88d8fcfac16cb00c04c6b2.jpg',
-        'https://i.pinimg.com/564x/41/58/95/4158951016e6277616121599bd7ca66c.jpg',
-        'https://i.pinimg.com/564x/01/7b/75/017b758a1a2ffc4feab524d5b77c1502.jpg',
-        'https://i.pinimg.com/564x/3a/39/14/3a391415d1aeedb0de6c4479c91d3559.jpg',
-        'https://i.pinimg.com/564x/1e/e3/68/1ee368bc67ba7878fe6b3567ad2e88d8.jpg']
-
+    var caminhoImgs = [
+        "https://i.pinimg.com/564x/10/c2/8c/10c28cce44d1b5c723b22c45f6b7def6.jpg",
+        "https://i.pinimg.com/564x/45/b4/45/45b4451aa0e90bbb856603db99bbbc93.jpg",
+        "https://i.pinimg.com/564x/67/a4/8d/67a48d564e086eb0c256831669cfd9c2.jpg",
+        "https://steamuserimages-a.akamaihd.net/ugc/1931509974427378219/C4F2117625B4EFA8A7BE202EBE674A4F126D9C82/?imw=1920&&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false",
+        "https://i.pinimg.com/564x/52/25/06/522506e66e88d8fcfac16cb00c04c6b2.jpg",
+        "https://i.pinimg.com/564x/41/58/95/4158951016e6277616121599bd7ca66c.jpg",
+        "https://i.pinimg.com/564x/01/7b/75/017b758a1a2ffc4feab524d5b77c1502.jpg",
+        "https://i.pinimg.com/564x/3a/39/14/3a391415d1aeedb0de6c4479c91d3559.jpg",
+        "https://i.pinimg.com/564x/1e/e3/68/1ee368bc67ba7878fe6b3567ad2e88d8.jpg",
+    ];
 
     var caminhoExemplos = [
         {
             explicacao: "Skins de pequenas lendas(personagens) em Team Fight Tactics",
-            caminhoImg: "https://1hitgames.com/wp-content/uploads/2020/05/D8uEWHzXkAAwLF1.jpg"
+            caminhoImg:
+                "https://1hitgames.com/wp-content/uploads/2020/05/D8uEWHzXkAAwLF1.jpg",
         },
         {
             explicacao: "Skin de arenas em Team Fight Tactics",
-            caminhoImg: "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltb8069740cc170e7f/60a719acc8faf774ab45f9ab/Count_Spatula_Concept_3_v2_5_25_21.jpg"
+            caminhoImg:
+                "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/bltb8069740cc170e7f/60a719acc8faf774ab45f9ab/Count_Spatula_Concept_3_v2_5_25_21.jpg",
         },
         {
             explicacao: "Mais Skins de arenas...",
-            caminhoImg: "https://1.bp.blogspot.com/-I8LXd8zihGE/XcXKOzXnroI/AAAAAAABHaU/qqY8bnZYrMgNtYy2OG7Zs30YKxeOcbXeACLcBGAsYHQ/s1600/image%2B%25285%2529.jpg"
+            caminhoImg:
+                "https://1.bp.blogspot.com/-I8LXd8zihGE/XcXKOzXnroI/AAAAAAABHaU/qqY8bnZYrMgNtYy2OG7Zs30YKxeOcbXeACLcBGAsYHQ/s1600/image%2B%25285%2529.jpg",
         },
         {
             explicacao: "Mais Skins de arenas...",
-            caminhoImg: "http://am-a.akamaihd.net/image?f=https://news-a.akamaihd.net/public/images/articles/2019/october/freljordarena/Frost_Guard_Arena.jpg&resize=1536:"
+            caminhoImg:
+                "http://am-a.akamaihd.net/image?f=https://news-a.akamaihd.net/public/images/articles/2019/october/freljordarena/Frost_Guard_Arena.jpg&resize=1536:",
         },
         {
             explicacao: "Skins de booms...",
-            caminhoImg: "https://static.invenglobal.com/upload/image/2020/05/25/o1590420216632167.png"
+            caminhoImg:
+                "https://static.invenglobal.com/upload/image/2020/05/25/o1590420216632167.png",
         },
         {
             explicacao: "Skins de booms...",
-            caminhoImg: "https://assets.gamepur.com/wp-content/uploads/2022/11/07103639/TFT-Booms-850x478.jpg"
-        }
-    ]
+            caminhoImg:
+                "https://assets.gamepur.com/wp-content/uploads/2022/11/07103639/TFT-Booms-850x478.jpg",
+        },
+    ];
 
-    var contador = 0
+    var contador = 0;
 
     function sortearimg() {
-        num = parseInt(Math.random() * (caminhoImgs.length))
+        num = parseInt(Math.random() * caminhoImgs.length);
 
-        document.getElementById('skinCarrosel').style.backgroundImage = `url('${caminhoImgs[num]}')`
+        document.getElementById(
+            "skinCarrosel"
+        ).style.backgroundImage = `url('${caminhoImgs[num]}')`;
         setTimeout(() => {
             sortearimg();
         }, "2000");
     }
 
     function trocarExemplo() {
-
         if (contador >= caminhoExemplos.length) {
-            contador = 0
+            contador = 0;
         }
 
-        textoExemplos.innerHTML = `${caminhoExemplos[contador].explicacao}`
-        imgExemplos.style.backgroundImage = `url('${caminhoExemplos[contador].caminhoImg}')`
+        textoExemplos.innerHTML = `${caminhoExemplos[contador].explicacao}`;
+        imgExemplos.style.backgroundImage = `url('${caminhoExemplos[contador].caminhoImg}')`;
 
         setTimeout(() => {
             trocarExemplo();
         }, "5000");
-        contador++
-
+        contador++;
     }
 </script>
 <!-- FIM ROTAÇÃO DAS IMAGENS -->
 
-
 <!-- CRIAÇÃO DA LISTA DE ESCOLHA DE SKINS -->
 <script>
+    var skins = [
+        {
+            nomePersonagem: "AWP",
+            nomeSkin: "Asiimov",
+            jogo: "Counter Strike: Global Offensive",
+            caminhoImg:
+                "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9hd3BfY3VfYXdwX2FzaW1vdl9saWdodF9sYXJnZS4zMmQ5MDQ1ZjhhMmJjZDEzY2ExODM5MGNjOWZkODIwMjZlNzE5NWFiLnBuZw--/auto/auto/85/notrim/3f3705a2adf75e891fdb212e6309755e.webp",
+            fkSkin: 1,
+        },
+        {
+            nomePersonagem: "AWP",
+            nomeSkin: "Neo-Noir",
+            jogo: "Counter Strike: Global Offensive",
+            caminhoImg:
+                "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9hd3BfY3VfYXdwX25lb25vaXJfbGlnaHRfbGFyZ2UuYzVkZDU3Zjg1NTVkMTNjNDFmMDgwMjRmMjdhOTMxNDA3NGI2OThhZi5wbmc-/auto/auto/85/notrim/35a4c7d7ca4975146774f46c26106407.webp",
+            fkSkin: 2,
+        },
+        {
+            nomePersonagem: "AWP",
+            nomeSkin: "Atheris",
+            jogo: "Counter Strike: Global Offensive",
+            caminhoImg:
+                "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9hd3BfY3VfYXdwX3ZpcGVyX2xpZ2h0X2xhcmdlLjJkZTc1NDA4YTdjNTk1MzEyZDU4MjAzZjUzYzczYTNhMThmYWE0YTMucG5n/auto/auto/85/notrim/306e0ba35cae9b3d42c540fa2a9c7726.webp",
+            fkSkin: 3,
+        },
+        {
+            nomePersonagem: "AK-47",
+            nomeSkin: "Ice Coaled",
+            jogo: "Counter Strike: Global Offensive",
+            caminhoImg:
+                "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9hazQ3X2N1X2FrNDdfY29ndGhpbmdzX2xpZ2h0X2xhcmdlLjliNDY3OGE3MGMzMTVlNWQ2MGEyMDM0MzZiN2E5NWNkNGM1ZGNjODkucG5n/auto/auto/85/notrim/bc13b2fd9ea48a6ffc74b418aac13e32.webp",
+            fkSkin: 4,
+        },
+        {
+            nomePersonagem: "AK-47",
+            nomeSkin: "Slate",
+            jogo: "Counter Strike: Global Offensive",
+            caminhoImg:
+                "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9hazQ3X2dzX2FrNDdfcHJvZmVzc2lvbmFsX2xpZ2h0X2xhcmdlLmQwOWQ2MjNkMGE3MjVjNjNlOGEzOTA1ZjY2YmJhNDFiYTJlZDU5ZTgucG5n/auto/auto/85/notrim/80e5e7d932106d10badb93ccfc10b648.webp",
+            fkSkin: 5,
+        },
+        {
+            nomePersonagem: "AK-47",
+            nomeSkin: "Nightwish",
+            jogo: "Counter Strike: Global Offensive",
+            caminhoImg:
+                "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9hazQ3X2N1X2FrNDdfbmlnaHR3aXNoX2xpZ2h0X2xhcmdlLjBjNDU4MWJlMDk0ZTJiZDczMmJlYzE4ZWJkYWQyZjcxYjEwMThhZjIucG5n/auto/auto/85/notrim/3bf736c4f8a790cfddb4158587415b44.webp",
+            fkSkin: 6,
+        },
+        {
+            nomePersonagem: "Desert Eagle",
+            nomeSkin: "Code Red",
+            jogo: "Counter Strike: Global Offensive",
+            caminhoImg:
+                "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9kZWFnbGVfZ3NfZGVhZ2xlX2FnZ3Jlc3Nvcl9saWdodF9sYXJnZS41MWZmYjg3ZjAzYWUwZDNjNDY3ZDQ0MTJmM2MyNDYwNjc3NDhlNjFkLnBuZw--/auto/auto/85/notrim/9ec696896d67fe4daec5179807eb50e7.webp",
+            fkSkin: 7,
+        },
+        {
+            nomePersonagem: "Desert Eagle",
+            nomeSkin: "Kumicho Dragon",
+            jogo: "Counter Strike: Global Offensive",
+            caminhoImg:
+                "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9kZWFnbGVfYXFfZGVzZXJ0ZWFnbGVfa3VtaWNob2RyYWdvbl9saWdodF9sYXJnZS4xOTg3NGU5YTIwY2ZhYzQ5ZWZiZTFmMTU1N2I5OTVlNDUzNjMzZmZlLnBuZw--/auto/auto/85/notrim/d5a83f4d1ebf38f24e1bcf03a45eed21.webp",
+            fkSkin: 8,
+        },
+        {
+            nomePersonagem: "Desert Eagle",
+            nomeSkin: "Fennec Fox",
+            jogo: "Counter Strike: Global Offensive",
+            caminhoImg:
+                "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9kZWFnbGVfZ3NfZGVhZ2xlX2Zlbm5lY19saWdodF9sYXJnZS45MmRiZGE3M2VkY2M2ZWI2MDIyZjFmMDI0OGNiMTkwNjNkNzEwN2FhLnBuZw--/auto/auto/85/notrim/ae6b08a591d811a10d5251ecaf80de56.webp",
+            fkSkin: 9,
+        },
+        {
+            nomePersonagem: "Ghost",
+            nomeSkin: "Luxe",
+            jogo: "Valorant",
+            caminhoImg:
+                "https://static.wikia.nocookie.net/valorant/images/1/10/Luxe_Ghost.png/revision/latest/scale-to-width-down/125?cb=20210707185727",
+            fkSkin: 10,
+        },
+        {
+            nomePersonagem: "Ghost",
+            nomeSkin: "Prism",
+            jogo: "Valorant",
+            caminhoImg:
+                "https://static.wikia.nocookie.net/valorant/images/c/ce/Prism_Ghost.png/revision/latest/scale-to-width-down/125?cb=20200623202609",
+            fkSkin: 11,
+        },
+        {
+            nomePersonagem: "Ghost",
+            nomeSkin: "Ego",
+            jogo: "Valorant",
+            caminhoImg:
+                "https://static.wikia.nocookie.net/valorant/images/6/6f/Ego_Ghost.png/revision/latest/scale-to-width-down/125?cb=20210707185619",
+            fkSkin: 12,
+        },
+        {
+            nomePersonagem: "Vandal",
+            nomeSkin: "Aristocrat",
+            jogo: "Valorant",
+            caminhoImg:
+                "https://static.wikia.nocookie.net/valorant/images/d/d4/Aristocrat_Vandal.png/revision/latest/scale-to-width-down/125?cb=20210707202447",
+            fkSkin: 13,
+        },
+        {
+            nomePersonagem: "Vandal",
+            nomeSkin: "Sakura",
+            jogo: "Valorant",
+            caminhoImg:
+                "https://static.wikia.nocookie.net/valorant/images/5/5f/Sakura_Vandal.png/revision/latest/scale-to-width-down/125?cb=20210707203414",
+            fkSkin: 14,
+        },
+        {
+            nomePersonagem: "Vandal",
+            nomeSkin: "Avalanche",
+            jogo: "Valorant",
+            caminhoImg:
+                "https://static.wikia.nocookie.net/valorant/images/b/b2/Avalanche_Vandal.png/revision/latest/scale-to-width-down/125?cb=20200408121231",
+            fkSkin: 15,
+        },
+        {
+            nomePersonagem: "Spectre",
+            nomeSkin: "Wasteland",
+            jogo: "Valorant",
+            caminhoImg:
+                "https://static.wikia.nocookie.net/valorant/images/f/fe/Wasteland_Spectre.png/revision/latest/scale-to-width-down/125?cb=20201027171118",
+            fkSkin: 16,
+        },
+        {
+            nomePersonagem: "Spectre",
+            nomeSkin: "BlastX",
+            jogo: "Valorant",
+            caminhoImg:
+                "https://static.wikia.nocookie.net/valorant/images/c/c6/BlastX_Spectre.png/revision/latest/scale-to-width-down/125?cb=20210708104407",
+            fkSkin: 17,
+        },
+        {
+            nomePersonagem: "Spectre",
+            nomeSkin: "Horizon",
+            jogo: "Valorant",
+            caminhoImg:
+                "https://static.wikia.nocookie.net/valorant/images/8/82/Horizon_Spectre.png/revision/latest/scale-to-width-down/125?cb=20210708104951",
+            fkSkin: 18,
+        },
+        {
+            nomePersonagem: "Kog'Maw",
+            nomeSkin: "Zap'Maw",
+            jogo: "League of Legends",
+            caminhoImg:
+                "https://www.mobafire.com/images/champion/skins/portrait/kog-maw-zap-maw.jpg",
+            fkSkin: 19,
+        },
+        {
+            nomePersonagem: "Kog'Maw",
+            nomeSkin: "Bee'Maw",
+            jogo: "League of Legends",
+            caminhoImg:
+                "https://www.mobafire.com/images/champion/skins/portrait/kog-maw-bee-maw.jpg",
+            fkSkin: 20,
+        },
+        {
+            nomePersonagem: "Kog'Maw",
+            nomeSkin: "Battlecast",
+            jogo: "League of Legends",
+            caminhoImg:
+                "https://www.mobafire.com/images/champion/skins/portrait/kogmaw-battlecast.jpg",
+            fkSkin: 21,
+        },
+        {
+            nomePersonagem: "Graves",
+            nomeSkin: "EDG",
+            jogo: "League of Legends",
+            caminhoImg:
+                "https://www.mobafire.com/images/champion/skins/portrait/graves-sentinel.jpg",
+            fkSkin: 22,
+        },
+        {
+            nomePersonagem: "Graves",
+            nomeSkin: "Sentinel",
+            jogo: "League of Legends",
+            caminhoImg:
+                "https://www.mobafire.com/images/champion/skins/portrait/graves-sentinel.jpg",
+            fkSkin: 23,
+        },
+        {
+            nomePersonagem: "Graves",
+            nomeSkin: "Battle Professor",
+            jogo: "League of Legends",
+            caminhoImg:
+                "https://www.mobafire.com/images/champion/skins/portrait/graves-battle-professor.jpg",
+            fkSkin: 24,
+        },
+        {
+            nomePersonagem: "Lee Sin",
+            nomeSkin: "Storm Dragon",
+            jogo: "League of Legends",
+            caminhoImg:
+                "https://www.mobafire.com/images/champion/skins/portrait/lee-sin-storm-dragon.jpg",
+            fkSkin: 25,
+        },
+        {
+            nomePersonagem: "Lee Sin",
+            nomeSkin: "FPX",
+            jogo: "League of Legends",
+            caminhoImg:
+                "https://www.mobafire.com/images/champion/skins/portrait/lee-sin-fpx.jpg",
+            fkSkin: 26,
+        },
+        {
+            nomePersonagem: "Lee Sin",
+            nomeSkin: "Muay Thai",
+            jogo: "League of Legends",
+            caminhoImg:
+                "https://www.mobafire.com/images/champion/skins/portrait/lee-sin-muay-thai.jpg",
+            fkSkin: 27,
+        },
+    ];
 
-var skins = [
-    {
-        nomePersonagem: "AWP",
-        nomeSkin: "Asiimov",
-        jogo: "Counter Strike: Global Offensive",
-        caminhoImg: "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9hd3BfY3VfYXdwX2FzaW1vdl9saWdodF9sYXJnZS4zMmQ5MDQ1ZjhhMmJjZDEzY2ExODM5MGNjOWZkODIwMjZlNzE5NWFiLnBuZw--/auto/auto/85/notrim/3f3705a2adf75e891fdb212e6309755e.webp",
-        fkSkin: 1
-    },
-    {
-        nomePersonagem: "AWP",
-        nomeSkin: "Neo-Noir",
-        jogo: "Counter Strike: Global Offensive",
-        caminhoImg: "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9hd3BfY3VfYXdwX25lb25vaXJfbGlnaHRfbGFyZ2UuYzVkZDU3Zjg1NTVkMTNjNDFmMDgwMjRmMjdhOTMxNDA3NGI2OThhZi5wbmc-/auto/auto/85/notrim/35a4c7d7ca4975146774f46c26106407.webp",
-        fkSkin: 2
-    },
-    {
-        nomePersonagem: "AWP",
-        nomeSkin: "Atheris",
-        jogo: "Counter Strike: Global Offensive",
-        caminhoImg: "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9hd3BfY3VfYXdwX3ZpcGVyX2xpZ2h0X2xhcmdlLjJkZTc1NDA4YTdjNTk1MzEyZDU4MjAzZjUzYzczYTNhMThmYWE0YTMucG5n/auto/auto/85/notrim/306e0ba35cae9b3d42c540fa2a9c7726.webp",
-        fkSkin: 3
-    },
-    {
-        nomePersonagem: "AK-47",
-        nomeSkin: "Ice Coaled",
-        jogo: "Counter Strike: Global Offensive",
-        caminhoImg: "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9hazQ3X2N1X2FrNDdfY29ndGhpbmdzX2xpZ2h0X2xhcmdlLjliNDY3OGE3MGMzMTVlNWQ2MGEyMDM0MzZiN2E5NWNkNGM1ZGNjODkucG5n/auto/auto/85/notrim/bc13b2fd9ea48a6ffc74b418aac13e32.webp",
-        fkSkin: 4
-    },
-    {
-        nomePersonagem: "AK-47",
-        nomeSkin: "Slate",
-        jogo: "Counter Strike: Global Offensive",
-        caminhoImg: "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9hazQ3X2dzX2FrNDdfcHJvZmVzc2lvbmFsX2xpZ2h0X2xhcmdlLmQwOWQ2MjNkMGE3MjVjNjNlOGEzOTA1ZjY2YmJhNDFiYTJlZDU5ZTgucG5n/auto/auto/85/notrim/80e5e7d932106d10badb93ccfc10b648.webp",
-        fkSkin: 5
-    },
-    {
-        nomePersonagem: "AK-47",
-        nomeSkin: "Nightwish",
-        jogo: "Counter Strike: Global Offensive",
-        caminhoImg: "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9hazQ3X2N1X2FrNDdfbmlnaHR3aXNoX2xpZ2h0X2xhcmdlLjBjNDU4MWJlMDk0ZTJiZDczMmJlYzE4ZWJkYWQyZjcxYjEwMThhZjIucG5n/auto/auto/85/notrim/3bf736c4f8a790cfddb4158587415b44.webp",
-        fkSkin: 6
-    },
-    {
-        nomePersonagem: "Desert Eagle",
-        nomeSkin: "Code Red",
-        jogo: "Counter Strike: Global Offensive",
-        caminhoImg: "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9kZWFnbGVfZ3NfZGVhZ2xlX2FnZ3Jlc3Nvcl9saWdodF9sYXJnZS41MWZmYjg3ZjAzYWUwZDNjNDY3ZDQ0MTJmM2MyNDYwNjc3NDhlNjFkLnBuZw--/auto/auto/85/notrim/9ec696896d67fe4daec5179807eb50e7.webp",
-        fkSkin: 7
-    },
-    {
-        nomePersonagem: "Desert Eagle",
-        nomeSkin: "Kumicho Dragon",
-        jogo: "Counter Strike: Global Offensive",
-        caminhoImg: "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9kZWFnbGVfYXFfZGVzZXJ0ZWFnbGVfa3VtaWNob2RyYWdvbl9saWdodF9sYXJnZS4xOTg3NGU5YTIwY2ZhYzQ5ZWZiZTFmMTU1N2I5OTVlNDUzNjMzZmZlLnBuZw--/auto/auto/85/notrim/d5a83f4d1ebf38f24e1bcf03a45eed21.webp",
-        fkSkin: 8
-    },
-    {
-        nomePersonagem: "Desert Eagle",
-        nomeSkin: "Fennec Fox",
-        jogo: "Counter Strike: Global Offensive",
-        caminhoImg: "https://cdn.csgoskins.gg/public/uih/items/aHR0cHM6Ly9zdGVhbWNkbi1hLmFrYW1haWhkLm5ldC9hcHBzLzczMC9pY29ucy9lY29uL2RlZmF1bHRfZ2VuZXJhdGVkL3dlYXBvbl9kZWFnbGVfZ3NfZGVhZ2xlX2Zlbm5lY19saWdodF9sYXJnZS45MmRiZGE3M2VkY2M2ZWI2MDIyZjFmMDI0OGNiMTkwNjNkNzEwN2FhLnBuZw--/auto/auto/85/notrim/ae6b08a591d811a10d5251ecaf80de56.webp",
-        fkSkin: 9
-    },
-    {
-        nomePersonagem: "Ghost",
-        nomeSkin: "Luxe",
-        jogo: "Valorant",
-        caminhoImg: "https://static.wikia.nocookie.net/valorant/images/1/10/Luxe_Ghost.png/revision/latest/scale-to-width-down/125?cb=20210707185727",
-        fkSkin: 10
-    },
-    {
-        nomePersonagem: "Ghost",
-        nomeSkin: "Prism",
-        jogo: "Valorant",
-        caminhoImg: "https://static.wikia.nocookie.net/valorant/images/c/ce/Prism_Ghost.png/revision/latest/scale-to-width-down/125?cb=20200623202609",
-        fkSkin: 11
-    },
-    {
-        nomePersonagem: "Ghost",
-        nomeSkin: "Ego",
-        jogo: "Valorant",
-        caminhoImg: "https://static.wikia.nocookie.net/valorant/images/6/6f/Ego_Ghost.png/revision/latest/scale-to-width-down/125?cb=20210707185619",
-        fkSkin: 12
-    },
-    {
-        nomePersonagem: "Vandal",
-        nomeSkin: "Aristocrat",
-        jogo: "Valorant",
-        caminhoImg: "https://static.wikia.nocookie.net/valorant/images/d/d4/Aristocrat_Vandal.png/revision/latest/scale-to-width-down/125?cb=20210707202447",
-        fkSkin: 13
-    },
-    {
-        nomePersonagem: "Vandal",
-        nomeSkin: "Sakura",
-        jogo: "Valorant",
-        caminhoImg: "https://static.wikia.nocookie.net/valorant/images/5/5f/Sakura_Vandal.png/revision/latest/scale-to-width-down/125?cb=20210707203414",
-        fkSkin: 14
-    },
-    {
-        nomePersonagem: "Vandal",
-        nomeSkin: "Avalanche",
-        jogo: "Valorant",
-        caminhoImg: "https://static.wikia.nocookie.net/valorant/images/b/b2/Avalanche_Vandal.png/revision/latest/scale-to-width-down/125?cb=20200408121231",
-        fkSkin: 15
-    },
-    {
-        nomePersonagem: "Spectre",
-        nomeSkin: "Wasteland",
-        jogo: "Valorant",
-        caminhoImg: "https://static.wikia.nocookie.net/valorant/images/f/fe/Wasteland_Spectre.png/revision/latest/scale-to-width-down/125?cb=20201027171118",
-        fkSkin: 16
-    },
-    {
-        nomePersonagem: "Spectre",
-        nomeSkin: "BlastX",
-        jogo: "Valorant",
-        caminhoImg: "https://static.wikia.nocookie.net/valorant/images/c/c6/BlastX_Spectre.png/revision/latest/scale-to-width-down/125?cb=20210708104407",
-        fkSkin: 17
-    },
-    {
-        nomePersonagem: "Spectre",
-        nomeSkin: "Horizon",
-        jogo: "Valorant",
-        caminhoImg: "https://static.wikia.nocookie.net/valorant/images/8/82/Horizon_Spectre.png/revision/latest/scale-to-width-down/125?cb=20210708104951",
-        fkSkin: 18
-    },
-    {
-        nomePersonagem: "Kog'Maw",
-        nomeSkin: "Zap'Maw",
-        jogo: "League of Legends",
-        caminhoImg: "https://www.mobafire.com/images/champion/skins/portrait/kog-maw-zap-maw.jpg",
-        fkSkin: 19
-    },
-    {
-        nomePersonagem: "Kog'Maw",
-        nomeSkin: "Bee'Maw",
-        jogo: "League of Legends",
-        caminhoImg: "https://www.mobafire.com/images/champion/skins/portrait/kog-maw-bee-maw.jpg",
-        fkSkin: 20
-    },
-    {
-        nomePersonagem: "Kog'Maw",
-        nomeSkin: "Battlecast",
-        jogo: "League of Legends",
-        caminhoImg: "https://www.mobafire.com/images/champion/skins/portrait/kogmaw-battlecast.jpg",
-        fkSkin: 21
-    },
-    {
-        nomePersonagem: "Graves",
-        nomeSkin: "EDG",
-        jogo: "League of Legends",
-        caminhoImg: "https://www.mobafire.com/images/champion/skins/portrait/graves-sentinel.jpg",
-        fkSkin: 22
-    },
-    {
-        nomePersonagem: "Graves",
-        nomeSkin: "Sentinel",
-        jogo: "League of Legends",
-        caminhoImg: "https://www.mobafire.com/images/champion/skins/portrait/graves-sentinel.jpg",
-        fkSkin: 23
-    },
-    {
-        nomePersonagem: "Graves",
-        nomeSkin: "Battle Professor",
-        jogo: "League of Legends",
-        caminhoImg: "https://www.mobafire.com/images/champion/skins/portrait/graves-battle-professor.jpg",
-        fkSkin: 24
-    },
-    {
-        nomePersonagem: "Lee Sin",
-        nomeSkin: "Storm Dragon",
-        jogo: "League of Legends",
-        caminhoImg: "https://www.mobafire.com/images/champion/skins/portrait/lee-sin-storm-dragon.jpg",
-        fkSkin: 25
-    },
-    {
-        nomePersonagem: "Lee Sin",
-        nomeSkin: "FPX",
-        jogo: "League of Legends",
-        caminhoImg: "https://www.mobafire.com/images/champion/skins/portrait/lee-sin-fpx.jpg",
-        fkSkin: 26
-    },
-    {
-        nomePersonagem: "Lee Sin",
-        nomeSkin: "Muay Thai",
-        jogo: "League of Legends",
-        caminhoImg: "https://www.mobafire.com/images/champion/skins/portrait/lee-sin-muay-thai.jpg",
-        fkSkin: 27
-    },
-]
 
 
+    var conteudo = `<select name="" id="sel_jogo" onchange="montarSelectPersonagem()">
+            <option selected disabled value="">- ESCOLHA UM -</option>`;
+    for (let index = 0; index < skins.length; index += 9) {
+        conteudo += `<option value="${skins[index].jogo}">${skins[index].jogo}</option>`;
+    }
+
+    escolhaJogo.innerHTML = `${conteudo} </select>`;
 
 
+    function montarSelectPersonagem() {
+        escolhaSkin.innerHTML = ''
+        var jogoSelecionado = sel_jogo.value;
+
+        var conteudoPersonagem = `<select id="sel_personagem" onchange="montarSelectSkin()">
+                                    <option selected disabled value="">- ESCOLHA UM -</option> `;
+        for (let index = 0; index < skins.length; index += 3) {
+            if (skins[index].jogo == jogoSelecionado) {
+                conteudoPersonagem += `<option value="${skins[index].nomePersonagem}">${skins[index].nomePersonagem}</option>`;
+            }
+        }
+        escolhaPersonagem.innerHTML = `${conteudoPersonagem} </select>`;
+    }
+
+    function montarSelectSkin() {
+        var personagemSelecionado = sel_personagem.value;
+
+        var conteudoSkin = `<select id="sel_skin" onchange="finalizarCadastro()">
+                                    <option selected disabled value="">- ESCOLHA UM -</option> `;
+        for (let index = 0; index < skins.length; index++) {
+            if (skins[index].nomePersonagem == personagemSelecionado) {
+                conteudoSkin += `<option value="${skins[index].nomeSkin}">${skins[index].nomeSkin}</option>`;
+            }
+        }
+        escolhaSkin.innerHTML = `${conteudoSkin} </select>`;
+    }
+
+    function finalizarCadastro() {
+        var skinEscolhida = sel_skin.value
+        
+        for (let index = 0; index < skins.length; index++) {
+            if (skins[index].nomeSkin == skinEscolhida) {
+                imgSkinEscolhida.style.backgroundImage = `url('${skins[index].caminhoImg}')`
+                editar(skins[index].fkSkin)
+                break
+            }
+
+        }
+
+
+    }
+
+    function editar(fkSkin) {
+        fetch(`/usuarios/editar/${fkSkin}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                fkSkin: fkSkin,
+                idUsuario: sessionStorage.ID_USUARIO
+            })
+        }).then(function (resposta) {
+
+            if (resposta.ok) {
+                window.alert("Skin escolhida com sucesso: " + sessionStorage.getItem("SKIN_FAVORITA") + "!");
+                window.location = "index.html"
+            } else if (resposta.status == 404) {
+                window.alert("Deu 404!");
+            } else {
+                throw ("Houve um erro ao tentar realizar a postagem! Código da resposta: " + resposta.status);
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+    }
 </script>
 <!-- FIM CRIAÇÃO DA LISTA DE ESCOLHA DE SKINS -->

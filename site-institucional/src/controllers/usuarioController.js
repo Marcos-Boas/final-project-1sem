@@ -133,10 +133,32 @@ function cadastrarNum(req, res) {
     }
 }
 
+
+function editar(req, res) {
+    var novaFkSkin = req.body.novaFkSkin;
+    var idUsuario = req.params.idUsuario;
+
+    avisoModel.editar(novaFkSkin, idUsuario)
+        .then(
+            function (resultado) {
+                res.json(resultado);
+            }
+        )
+        .catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar o post: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+
+}
+
 module.exports = {
     entrar,
     cadastrar, 
     cadastrarNum, 
     listar,
-    testar
+    testar,
+    editar
 }
