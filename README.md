@@ -13,13 +13,13 @@
 
 <h2>Tela de login</h2>
 
-<img src="https://i.pinimg.com/750x/6b/0c/fc/6b0cfc2aa1007f9f8a6af5495fb8f354.jpg">
+<img src="[https://i.pinimg.com/750x/6b/0c/fc/6b0cfc2aa1007f9f8a6af5495fb8f354.jpg](https://drive.google.com/file/d/1aqpBk5LwP0NkOvB6byDarI10m-bC_S3p/view?usp=sharing)">
 
 <br>
 
 <h2>Tela de cadastro</h2>
 
-<img src="https://i.pinimg.com/750x/91/ba/1b/91ba1b5de01fca2ed9d3f288ad6181a2.jpg">
+<img src="[https://i.pinimg.com/750x/91/ba/1b/91ba1b5de01fca2ed9d3f288ad6181a2.jpg](https://drive.google.com/file/d/1x4Hc46F4RWULI8Z_G_uq1vBI0PyK0XJO/view?usp=sharing)">
 
 <br>
 <hr />
