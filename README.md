@@ -13,13 +13,13 @@
 
 <h2>Tela de login</h2>
 
-<img src="https://i.pinimg.com/750x/6b/0c/fc/6b0cfc2aa1007f9f8a6af5495fb8f354.jpg">
+<img src="https://github.com/Marcos-HVB/PI-ProjetoIndividual-1Semestre/blob/main/site-institucional/public/assets/demos/telaLoginProjeto.png">
 
 <br>
 
 <h2>Tela de cadastro</h2>
 
-<img src="https://i.pinimg.com/750x/91/ba/1b/91ba1b5de01fca2ed9d3f288ad6181a2.jpg">
+<img src="https://github.com/Marcos-HVB/PI-ProjetoIndividual-1Semestre/blob/main/site-institucional/public/assets/demos/telaCadastroProjeto.png">
 
 <br>
 <hr />
