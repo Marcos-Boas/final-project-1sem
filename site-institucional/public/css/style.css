@@ -1,13 +1,12 @@
-
 * {
     padding: 0;
     margin: 0;
     font-family: 'Roboto', Arial, 'Times New Roman';
-    scrollbar-width:thin;  
-    scrollbar-color: #554e9a #9d9fe9; 
+    scrollbar-width: thin;
+    scrollbar-color: #554e9a #9d9fe9;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -25,8 +24,9 @@ body::-webkit-scrollbar-thumb {
     background: #554e9a;
     border-radius: 20px;
 }
+
 body::-webkit-scrollbar {
-    scrollbar-width:thin; 
+    scrollbar-width: thin;
     background: #554e9a;
 }
 
@@ -45,7 +45,7 @@ body {
 
 /* EASTER EGG */
 
-.surgindo{
+.surgindo {
     position: fixed;
     display: block;
     top: -5%;
@@ -56,10 +56,11 @@ body {
     transition: 2s;
 }
 
-.surgindo:hover{
+.surgindo:hover {
     top: -15%;
     transition: all .2s ease-in-out;
 }
+
 /* FIM EASTER EGG */
 
 /* GERAIS */
@@ -69,44 +70,44 @@ ul {
     /* list-style-image: url(''); */
 }
 
-a{
+a {
     text-decoration: none;
-    color:#fff;
-}
-
-.corRoxa{
-    color:#554e9a;
-}
-
-.corBranca{
     color: #fff;
 }
 
-.preto{
+.corRoxa {
+    color: #554e9a;
+}
+
+.corBranca {
+    color: #fff;
+}
+
+.preto {
     color: #555;
 }
 
-.primeiraCor{
+.primeiraCor {
     background-color: #9295eb;
 }
 
-.segundaCor{
+.segundaCor {
     background-color: #f2f6fa;
 }
 
-.tituloCard{
+.tituloCard {
     margin-bottom: 2%;
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
 }
 
-.textoCard{
+.textoCard {
     font-size: 2rem;
     font-weight: bold;
     text-align: justify;
     margin: 0 5%;
-    
+
 }
 
 
@@ -123,15 +124,15 @@ a{
     background-color: #554e9a;
     color: #fefefe;
     position: fixed;
-    
+
 }
 
-.menuLateral img{
+.menuLateral img {
     margin-top: 5%;
     width: 100%;
 }
 
-.apresentacaoCliente{
+.apresentacaoCliente {
     margin-top: 5%;
     font-size: 1.2rem;
     text-align: center;
@@ -144,81 +145,84 @@ a{
 
 
 
-.subItems{
-    margin-bottom: 8%;   
+.subItems {
+    margin-bottom: 8%;
     transition: 0.1s;
 }
 
-.subItems:hover{
+.subItems:hover {
     cursor: pointer;
     transform: scale(1);
     font-weight: bold;
     transition: 0.1s;
-    
+
 }
 
-.subItems:after{
+.subItems:after {
     content: " <";
     visibility: hidden;
 }
 
-.subItems:hover:after{
+.subItems:hover:after {
     visibility: visible;
     transform: scaleX(1);
 }
 
-.linkAtivo{
+.linkAtivo {
     font-weight: bold;
-    margin-bottom: 8%; 
+    margin-bottom: 8%;
 }
 
-.linkAtivo::after{
+.linkAtivo::after {
     content: " <";
     visibility: hidden;
     visibility: visible;
     transform: scaleX(1);
 }
 
-.subMenu{
-    margin-left:15%;
+.subMenu {
+    margin-left: 15%;
 }
 
 
-.rodape{
+.rodape {
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
 
-.rodape img{
+.rodape img {
     width: 12%;
 }
 
 
-.rodape img:hover{
+.rodape img:hover {
     cursor: pointer;
 }
 
-.copyright{
+.copyright {
     margin-top: 3%;
     text-align: center;
 }
+
 /* FINAL - MENU LATERAL */
 
 
 /* CORPO */
 
-.corpo{
+.corpo {
     width: 80vw;
     margin-left: 20vw;
 }
+
 /* FIM CORPO */
 
 
 /* CARDS*/
 
 
-.card2, .card{
+.card2,
+.card {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -226,46 +230,46 @@ a{
     height: 100vh;
 }
 
-.card{
+.card {
     flex-direction: column;
 }
 
 /* CARD 1 - PQ SKINS? */
 
-.imagemCard1{
+.imagemCard1 {
     background-image: url('../assets/imgs/skinsLol.jpg');
     background-size: cover;
-    background-position: center;   
+    background-position: center;
 }
 
-.opaca{
-    display:flex;
+.opaca {
+    display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(7px);   
+    backdrop-filter: blur(7px);
 }
 
-.texto{
+.texto {
     width: 50%;
 }
 
-.skinCarrosel{
+.skinCarrosel {
     width: 45%;
     height: 80%;
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    transition:ease-in-out 0.5s;
+    transition: ease-in-out 0.5s;
 }
 
 /* FIM CARD 1 - PQ SKINS? */
 
 
 /* CARD 2 - DEFINIÇÃO */
-.imgApresentacao{
+.imgApresentacao {
     background-image: url("../assets/imgs/exemploDefinicao.jpg");
     margin-top: 2%;
     margin-bottom: 1%;
@@ -275,11 +279,12 @@ a{
     background-repeat: no-repeat;
     background-position: center;
 }
+
 /* FIM CARD2 */
 
 /* CARD 3 - MAIS EXEMPLOS */
 
-.imgExemplos{
+.imgExemplos {
     width: 80%;
     height: 90%;
     padding: 5%;
@@ -295,7 +300,7 @@ a{
 
 /* CARD 4 FINANCEIRO */
 
-.alinhamentoCorpo{
+.alinhamentoCorpo {
     height: 100%;
     width: 100%;
     padding: 2%;
@@ -304,48 +309,48 @@ a{
 }
 
 
-hr{
+hr {
     width: 100%;
-    background-color:#554e9a;
+    background-color: #554e9a;
     transform: rotate(90deg);
 }
 
-.imagemCardFinanceiro{
+.imagemCardFinanceiro {
     background-image: url('../assets/imgs/onrnSabugueiro.jfif');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.opacaCardFinanceiro{
-    display:flex;
+.opacaCardFinanceiro {
+    display: flex;
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 100%;
-    
-    
-    backdrop-filter: blur(5px);  
+
+
+    backdrop-filter: blur(5px);
 }
 
 /* FIM CARD 4 FINANCEIRO */
 
 /* CARD 5 GRÁFICOS */
 
-.cardGrafico{
+.cardGrafico {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     width: 100%;
-    height: 100vh;   
+    height: 100vh;
 }
 
-.cardGrafico .tituloCard{
+.cardGrafico .tituloCard {
     margin-top: 3%;
 }
 
 
-.myChartJs{
-    
+.myChartJs {
+
     display: flex;
     justify-content: center;
     width: 90%;
@@ -357,6 +362,68 @@ hr{
 /* CARD 6 ESCOLHA A SUA */
 
 
+.corpoEscolha {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
+
+.div_selects {
+    height: 50%;
+}
+
+select {
+    color: #554e9a;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    padding: 2%;
+    border: 1px solid #9295eb;
+    margin-bottom: 10%;
+}
+
+button {
+    position: absolute;
+    color: #fff;
+    background-color: #554e9a;
+    border-radius: 5px;
+    border: 1px solid #554e9a;
+    height: 7vh;
+    padding: 1%;
+    transition: 0.4s;
+    font-size: 16px;
+    margin-top: 20%;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #493eb3;
+    transition: 0.4s;
+}
+
+.imgSkinEscolhida {
+    width: 50%;
+    height: 90%;
+    background-image: url('../assets/imgs/pontoInterrogacao.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation: girar 4s linear infinite;
+    animation-name: girar;
+}
+
+@keyframes girar {
+    0%{
+        transform: rotate3d(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+}
 
 /* FIM CARD 6 ESCOLHA A SUA */

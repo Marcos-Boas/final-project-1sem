@@ -135,10 +135,10 @@ function cadastrarNum(req, res) {
 
 
 function editar(req, res) {
-    var novaFkSkin = req.body.novaFkSkin;
-    var idUsuario = req.params.idUsuario;
+    var fkSkin = req.body.fkSkin;
+    var idUsuario = req.body.idUsuario;
 
-    avisoModel.editar(novaFkSkin, idUsuario)
+    usuarioModel.editar(fkSkin, idUsuario)
         .then(
             function (resultado) {
                 res.json(resultado);

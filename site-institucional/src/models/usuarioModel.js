@@ -45,10 +45,10 @@ function cadastrarNum(num, fkUsuario) {
     return database.executar(instrucao);
 }
 
-function editar(novaFkSkin, idUsuario) {
-    console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function editar(): ", novaFkSkin, idUsuario);
+function editar(fkSkin, idUsuario) {
+    console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function editar(): ", fkSkin, idUsuario);
     var instrucao = `
-        UPDATE usuario SET fkSkinFavorita = ${novaFkSkin} WHERE idUsuario = ${idUsuario};
+        UPDATE usuario SET fkSkinFavorita = ${fkSkin} WHERE idUsuario = ${idUsuario};
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

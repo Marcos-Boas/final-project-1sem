@@ -36,6 +36,19 @@ create table informacoesDeContato(
 );
 
 
+-- inserindo valores para exemplificar a KPI
+insert into usuario values
+	(null, 'Roberto', 'roberto@hotmail.com', '12345', '2003-06-09', 1),
+    (null, 'Maria', 'maria@hotmail.com', '12345', '2000-05-23', 2),
+    (null, 'Jose', 'jose@hotmail.com', '12345', '2004-07-15', 3),
+    (null, 'Fabio', 'fabio@hotmail.com', '12345', '2001-08-30', 4),
+    (null, 'Rayssa', 'rayssa@hotmail.com', '12345', '2002-08-30', 5),
+    (null, 'Alberto', 'alberto@hotmail.com', '12345', '2003-07-15', 6),
+    (null, 'Flavio', 'flavio@hotmail.com', '12345', '2005-07-15', 7),
+    (null, 'Fernanda', 'fernanda@hotmail.com', '12345', '2006-07-15', 8),
+    (null, 'Alessandro', 'alessandro@hotmail.com', '12345', '2007-07-15', 9),
+    (null, 'Dan', 'dan@hotmail.com', '12345', '2008-07-15', 1);
+
 
 -- select * from skin;
 -- Cs: go
@@ -52,15 +65,15 @@ insert into skinFavorita values
     
 -- Valorant
 insert into skinFavorita values 
-	(null, "Ghost", "Luxe", 'Valorant', 'https://static.wikia.nocookie.net/valorant/images/1/10/Luxe_Ghost.png/revision/latest/scale-to-width-down/125?cb=20210707185727'),
-    (null, "Ghost", "Prism", 'Valorant', 'https://static.wikia.nocookie.net/valorant/images/c/ce/Prism_Ghost.png/revision/latest/scale-to-width-down/125?cb=20200623202609'),
-    (null, "Ghost", "Ego", 'Valorant', 'https://static.wikia.nocookie.net/valorant/images/6/6f/Ego_Ghost.png/revision/latest/scale-to-width-down/125?cb=20210707185619'),
-    (null, "Vandal", "Aristocrat", 'Valorant', 'https://static.wikia.nocookie.net/valorant/images/d/d4/Aristocrat_Vandal.png/revision/latest/scale-to-width-down/125?cb=20210707202447'),
-    (null, "Vandal", "Sakura", 'Valorant', 'https://static.wikia.nocookie.net/valorant/images/5/5f/Sakura_Vandal.png/revision/latest/scale-to-width-down/125?cb=20210707203414'),
-    (null, "Vandal", "Avalanche", 'Valorant', 'https://static.wikia.nocookie.net/valorant/images/b/b2/Avalanche_Vandal.png/revision/latest/scale-to-width-down/125?cb=20200408121231'),
-    (null, "Spectre", "Wasteland", 'Valorant', 'https://static.wikia.nocookie.net/valorant/images/f/fe/Wasteland_Spectre.png/revision/latest/scale-to-width-down/125?cb=20201027171118'),
-    (null, "Spectre", "BlastX", 'Valorant', 'https://static.wikia.nocookie.net/valorant/images/c/c6/BlastX_Spectre.png/revision/latest/scale-to-width-down/125?cb=20210708104407'),
-    (null, "Spectre", "Horizon", 'Valorant', 'https://static.wikia.nocookie.net/valorant/images/8/82/Horizon_Spectre.png/revision/latest/scale-to-width-down/125?cb=20210708104951');
+	(null, "Ghost", "Luxe", 'Valorant', 'https://vgraphs.com/images/weapons/skins/full-details/valorant-luxe-ghost-weapon-skin.png'),
+    (null, "Ghost", "Prism", 'Valorant', 'https://vgraphs.com/images/weapons/skins/full-details/valorant-prism-ghost-weapon-skin.png'),
+    (null, "Ghost", "Ego", 'Valorant', 'https://vgraphs.com/images/weapons/skins/full-details/valorant-ego-ghost-weapon-skin.png'),
+    (null, "Vandal", "Aristocrat", 'Valorant', 'https://vgraphs.com/images/weapons/skins/full-details/valorant-aristocrat-vandal-weapon-skin.png'),
+    (null, "Vandal", "Sakura", 'Valorant', 'https://vgraphs.com/images/weapons/skins/full-details/valorant-sakura-vandal-weapon-skin.png'),
+    (null, "Vandal", "Avalanche", 'Valorant', 'https://vgraphs.com/images/weapons/skins/full-details/valorant-avalanche-vandal-weapon-skin.png'),
+    (null, "Spectre", "Wasteland", 'Valorant', 'https://vgraphs.com/images/weapons/skins/full-details/valorant-wasteland-spectre-weapon-skin.png'),
+    (null, "Spectre", "BlastX", 'Valorant', 'https://vgraphs.com/images/weapons/skins/full-details/valorant-blastx-spectre-weapon-skin.png'),
+    (null, "Spectre", "Horizon", 'Valorant', 'https://vgraphs.com/images/weapons/skins/full-details/valorant-horizon-spectre-weapon-skin.png');
     
 -- League Of Legendes
 insert into skinFavorita values 

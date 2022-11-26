@@ -36,6 +36,19 @@ create table informacoesDeContato(
 );
 
 
+-- inserindo valores para exemplificar a KPI
+insert into usuario values
+	(null, 'Roberto', 'roberto@hotmail.com', '12345', '2003-06-09', 1),
+    (null, 'Maria', 'maria@hotmail.com', '12345', '2000-05-23', 2),
+    (null, 'Jose', 'jose@hotmail.com', '12345', '2004-07-15', 3),
+    (null, 'Fabio', 'fabio@hotmail.com', '12345', '2001-08-30', 4),
+    (null, 'Rayssa', 'rayssa@hotmail.com', '12345', '2002-08-30', 5),
+    (null, 'Alberto', 'alberto@hotmail.com', '12345', '2003-07-15', 6),
+    (null, 'Flavio', 'flavio@hotmail.com', '12345', '2005-07-15', 7),
+    (null, 'Fernanda', 'fernanda@hotmail.com', '12345', '2006-07-15', 8),
+    (null, 'Alessandro', 'alessandro@hotmail.com', '12345', '2007-07-15', 9),
+    (null, 'Dan', 'dan@hotmail.com', '12345', '2008-07-15', 1);
+
 
 -- select * from skin;
 -- Cs: go

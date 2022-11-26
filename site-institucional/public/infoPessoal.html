@@ -6,17 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>MS | Cadastro</title>
+  <title>MS | Informações pessoais</title>
 
   <script src="./js/funcoes.js"></script>
 
   <link rel="icon" href="./assets/icon/favicon2.ico" />
   <link rel="stylesheet" href="css/cadastro.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet" />
   <link rel="shortcut icon" href="assets/imgs/logoPagina.png" type="image/x-icon" />
 </head>
 
@@ -35,43 +30,24 @@
       <div class="recepcao">
         <h1>Seja bem-vindo!</h1>
         <h3>Por favor, insira seu número de contato</h3>
+      </div>
+
+      <label for="in_nomeCompleto">Número</label> <br>
+      <input type="text" id="in_num" placeholder="ex: xx xxxxx xxxx"><br>
+
+      <button onclick="cadastrarNum()">Continuar</button>
+
+      <!-- <span class="spanLink">Já possui uma conta? <a href="login.html">Entre</a></span> -->
+
+      <span class="copyright">&copy; Marcos Henrique - SPTech / ADS</span>
     </div>
-
-    <label for="in_nomeCompleto">Número</label> <br>
-    <input type="text" id="in_num" placeholder="ex: xx xxxxx xxxx"><br>
-
-    <button onclick="cadastrarNum()">Continuar</button>
-
-    <!-- <span class="spanLink">Já possui uma conta? <a href="login.html">Entre</a></span> -->
-
-    <span class="copyright">&copy; Marcos Henrique - SPTech / ADS</span>
-  </div>
 </body>
 
 </html>
 
 <script>
 
-    var fkUsuario = sessionStorage.getItem('ID_USUARIO');
-
-  function telaPersonagensFavoritos() {
-    apresentacaoMenu.innerHTML = `         
-                                    <div class="recepcao">
-                                        <h1>Seja bem-vindo!</h1>
-                                        <h3>Por favor, selecione seu jogo preferido</h3>
-                                    </div>
-
-                                    <label for="in_nomeCompleto">Nome do personagem</label> <br>
-                                    <input type="text" id="in_nomeCompleto" placeholder="ex: Jose Alves dos Santos"><br>
-                                    <label for="in_nomeCompleto">Nome da Skin</label> <br>
-                                    <input type="text" id="in_nomeCompleto" placeholder="ex: Jose Alves dos Santos"><br>
-                                    <label for="in_nomeCompleto">Nome do jogo</label> <br>
-                                    <input type="text" id="in_nomeCompleto" placeholder="ex: Jose Alves dos Santos"><br>
-
-                                    <button onclick="cadastrarNum()">Cadastrar</button>
-                                    `;
-  }
-
+  var fkUsuario = sessionStorage.getItem('ID_USUARIO');
 
   function cadastrarNum() {
     // aguardar();
@@ -115,18 +91,14 @@
           );
 
           setTimeout(() => {
-            telaPersonagensFavoritos();
+            window.location = index.html;
           }, "2000");
-
-          limparFormulario();
-          finalizarAguardar();
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";
         }
       })
       .catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
       });
 
     return false;
