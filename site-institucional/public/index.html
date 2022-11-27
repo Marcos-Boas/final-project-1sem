@@ -17,7 +17,7 @@
     <title>MS | Home</title>
 </head>
 
-<body onload="validarSessao(), sortearimg(), trocarExemplo()">
+<body onload="validarSessao(), sortearimg(), trocarExemplo(), relacaoSkins()">
     <img src="./assets/imgs/surgindo.png" alt="" class="surgindo" />
     <!-- COMEÇO MENU LATERAL -->
     <div class="menuLateral">
@@ -34,9 +34,8 @@
                     <a href="#mundoFinanceiro">| Dados Monetários</a>
                 </li>
                 <li class="subItems"><a href="#escolhaSua">| Escolha a sua</a></li>
-                <li class="subItems"><a href="#contato">| Contato</a></li>
+                <li class="subItems"><a href="#curiosidades">| Curiosidades</a></li>
             </ul>
-            <li class="subItems"><a href="sobreMim.html">| Sobre mim</a></li>
             <li class="subItems" id="infoPessoal">
                 <a href="infoPessoal.html">| Informações pessoais</a>
             </li>
@@ -155,13 +154,22 @@
         </div>
         <!-- FIM CARD 6 -->
 
-        <!-- KPI -->
-        <div class="card segundaCor">
+        <!-- KPI CARD 7 -->
+        <div class="card2 segundaCor" id="curiosidades">
             
-            
+            <div class="kpi1">
+                <div class="tituloCard corRoxa">Skin mais favoritada</div>
+                <span class="textoCard corRoxa" id="nomeSkin"></span>
+                <div class="imgKpi1" id="imgKpi1"></div>
+            </div>       
+            <div class="kpi2">
+                <div class="tituloCard corRoxa">Skin menos favoritada</div>
+                <span class="textoCard corRoxa" id="nomeSkin2"></span>
+                <div class="imgKpi2" id="imgKpi2"></div>
+            </div>       
             
         </div>
-        <!-- FIM KPI -->
+        <!-- FIM KPI CARD 7-->
 
     </div>
 </body>
@@ -244,3 +252,57 @@
 <!-- CRIAÇÃO DA LISTA DE ESCOLHA DE SKINS -->
 <script src="js/skins.js"></script>
 <!-- FIM CRIAÇÃO DA LISTA DE ESCOLHA DE SKINS -->
+
+<script>
+
+function relacaoSkins() {
+        //aguardar();
+        fetch("/usuarios/listar").then(function (resposta) {
+            if (resposta.ok) {
+                if (resposta.status == 204) {
+                    var feed = document.getElementById("feed_container");
+                    var mensagem = document.createElement("span");
+                    mensagem.innerHTML = "Nenhum resultado encontrado."
+                    feed.appendChild(mensagem);
+                    throw "Nenhum resultado encontrado!!";
+                }
+
+
+
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+                    var maiorVotacao = resposta[0]
+                    var menorVotacao = resposta[0]
+                    
+                    // Math.min(resposta.count(caminhoImg)).caminhoImg
+                    
+                    for (let index = 0; index < resposta.length; index++) {
+                        
+                        if(resposta[index].votos > maiorVotacao.votos)
+                        maiorVotacao = resposta[index]
+                        
+                        if(resposta[index].votos < menorVotacao.votos)
+                        menorVotacao = resposta[index]
+                        
+                    }
+
+
+                    nomeSkin.innerHTML = `${maiorVotacao.nomePersonagem}: ${maiorVotacao.nomeSkin}`
+                    imgKpi1.style.backgroundImage = `url(${maiorVotacao.caminhoImg})`
+
+                    nomeSkin2.innerHTML = `${menorVotacao.nomePersonagem}: ${menorVotacao.nomeSkin}`
+                    imgKpi2.style.backgroundImage = `url(${menorVotacao.caminhoImg})`
+
+
+                });
+            } else {
+                throw ('Houve um erro na API!');
+            }
+        }).catch(function (resposta) {
+            console.error(resposta);
+            
+        });
+    }
+
+
+</script>

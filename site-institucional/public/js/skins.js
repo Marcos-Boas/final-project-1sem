@@ -172,7 +172,7 @@ var skins = [
     nomeSkin: "EDG",
     jogo: "League of Legends",
     caminhoImg:
-      "https://www.mobafire.com/images/champion/skins/portrait/graves-sentinel.jpg",
+      "https://www.mobafire.com/images/champion/skins/portrait/graves-edg.jpg",
     fkSkin: 22,
   },
   {
@@ -275,11 +275,6 @@ function editar() {
   })
     .then(function (resposta) {
       if (resposta.ok) {
-        window.alert(
-          "Skin escolhida com sucesso: " +
-            sessionStorage.getItem("SKIN_FAVORITA") +
-            "!"
-        );
         window.location = "index.html";
       } else if (resposta.status == 404) {
         window.alert("Deu 404!");

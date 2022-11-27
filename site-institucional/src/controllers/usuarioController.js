@@ -142,6 +142,7 @@ function editar(req, res) {
         .then(
             function (resultado) {
                 res.json(resultado);
+                session_storage.SKIN_FAVORITA = resultado.fkSkin
             }
         )
         .catch(

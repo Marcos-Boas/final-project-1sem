@@ -1,7 +1,5 @@
 // sessão
 function validarSessao() {
-    // aguardar();
-
     
     var email = sessionStorage.EMAIL_USUARIO;
     var nome = sessionStorage.NOME_USUARIO;
@@ -22,15 +20,5 @@ function limparSessao() {
     sessionStorage.clear();
     
     window.location = "../login.html";
-}
-
-
-
-function finalizarAguardar(texto) {
-
-    var divErrosLogin = document.getElementById("div_erros_login");
-    if (texto) {
-        divErrosLogin.innerHTML = texto;
-    }
 }
 

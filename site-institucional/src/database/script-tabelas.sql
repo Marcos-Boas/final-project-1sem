@@ -25,7 +25,7 @@ create table usuario(
 
 
 
- select * from informacoesDeContato;
+ -- select * from informacoesDeContato;
 
 create table informacoesDeContato(
 	idInformacoesDeContato int auto_increment,
@@ -39,7 +39,7 @@ create table informacoesDeContato(
 -- inserindo valores para exemplificar a KPI
 insert into usuario values
 	(null, 'Roberto', 'roberto@hotmail.com', '12345', '2003-06-09', 1),
-    (null, 'Maria', 'maria@hotmail.com', '12345', '2000-05-23', 2),
+    (null, 'Maria', 'maria@hotmail.com', '12345', '2000-05-23', 1),
     (null, 'Jose', 'jose@hotmail.com', '12345', '2004-07-15', 3),
     (null, 'Fabio', 'fabio@hotmail.com', '12345', '2001-08-30', 4),
     (null, 'Rayssa', 'rayssa@hotmail.com', '12345', '2002-08-30', 5),
@@ -80,7 +80,7 @@ insert into skinFavorita values
 	(null, "Kow'Maw", "Zap'Maw", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/kog-maw-zap-maw.jpg'),
     (null, "Kow'Maw", "Bee'Maw", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/kog-maw-bee-maw.jpg'),
     (null, "Kog'Maw", "Battlecast ", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/kogmaw-battlecast.jpg'),
-    (null, "Graves", "EDG", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/graves-sentinel.jpg'),
+    (null, "Graves", "EDG", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/graves-edg.jpg'),
     (null, "Graves", "Sentinel", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/graves-sentinel.jpg'),
     (null, "Graves", "Battle Professor", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/graves-battle-professor.jpg'),
     (null, "Lee Sin", "Storm Dragon", 'League of Legends', 'https://www.mobafire.com/images/champion/skins/portrait/lee-sin-storm-dragon.jpg'),
