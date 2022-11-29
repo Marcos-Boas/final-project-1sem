@@ -3,9 +3,9 @@ var database = require("../database/config")
 function listar() {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
     var instrucao = `
-    SELECT idSkinFavorita, count(caminhoImg) as votos, caminhoImg, nomeSkin, nomePersonagem FROM skinFavorita join usuario
+    SELECT count(idSkinFavorita) as votos, caminhoImg, nomeSkin, nomePersonagem FROM skinFavorita join usuario
 	on idSkinFavorita = fkSkinFavorita
-			group by nomeSkin;
+			group by idSkinFavorita;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
