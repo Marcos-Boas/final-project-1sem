@@ -11,15 +11,33 @@
 
 <br><br>
 
-<h2>Tela de login</h2>
+<h2>Tela inicial</h2>
 
 <img src="https://github.com/Marcos-HVB/PI-ProjetoIndividual-1Semestre/blob/main/site-institucional/public/assets/demos/telaLoginProjeto.png">
+
+<br>
+
+<h2>Tela de login</h2>
+
+<img src="https://github.com/Marcos-HVB/PI-ProjetoIndividual-1Semestre/blob/main/site-institucional/public/assets/demos/homeProjeto.png">
 
 <br>
 
 <h2>Tela de cadastro</h2>
 
 <img src="https://github.com/Marcos-HVB/PI-ProjetoIndividual-1Semestre/blob/main/site-institucional/public/assets/demos/telaCadastroProjeto.png">
+
+<br>
+
+<h2>Tela de cadastro de contato</h2>
+
+<img src="https://github.com/Marcos-HVB/PI-ProjetoIndividual-1Semestre/blob/main/site-institucional/public/assets/demos/cadastroNum.png">
+
+<br>
+
+<h2>Tela de cadastro de contato</h2>
+
+<img src="https://github.com/Marcos-HVB/PI-ProjetoIndividual-1Semestre/blob/main/site-institucional/public/assets/demos/escolhaFavoritaProjeto.png">
 
 <br>
 <hr />
