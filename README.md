@@ -35,7 +35,7 @@
 
 <br>
 
-<h2>Tela de cadastro de contato</h2>
+<h2>Tela de cadastro de skin favorita</h2>
 
 <img src="https://github.com/Marcos-HVB/PI-ProjetoIndividual-1Semestre/blob/main/site-institucional/public/assets/demos/escolhaFavoritaProjeto.png">
 
