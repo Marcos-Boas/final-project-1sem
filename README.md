@@ -22,13 +22,13 @@
 
 <h2>Tela inicial</h2>
 
-<img src="https://github.com/Marcos-HVB/PI-ProjetoIndividual-1Semestre/blob/main/site-institucional/public/assets/demos/telaLoginProjeto.png">
+<img src="https://github.com/Marcos-HVB/PI-ProjetoIndividual-1Semestre/blob/main/site-institucional/public/assets/demos/homeProjeto.png">
 
 <br>
 
 <h2>Tela de login</h2>
 
-<img src="https://github.com/Marcos-HVB/PI-ProjetoIndividual-1Semestre/blob/main/site-institucional/public/assets/demos/homeProjeto.png">
+<img src="https://github.com/Marcos-HVB/PI-ProjetoIndividual-1Semestre/blob/main/site-institucional/public/assets/demos/telaLoginProjeto.png">
 
 <br>
 
