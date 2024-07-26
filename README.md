@@ -47,7 +47,7 @@ Desenvolvi este projeto com um tema de meu gosto pessoal, abordando todo o conte
 - `#b8baea`
 - `#f8fafd`
 
-![Paleta de Cores](https://bookmarkos.s3.amazonaws.com/uploads/palette_pic/image/2676/large_photo-1589219123229-03469f0bc3ea.jpeg)
+<img src="https://bookmarkos.s3.amazonaws.com/uploads/palette_pic/image/2676/large_photo-1589219123229-03469f0bc3ea.jpeg" alt="Paleta de Cores" width="600" />
 
 *Site usado para a escolha da paleta: [colorpalettes.earth](https://colorpalettes.earth)*
 
